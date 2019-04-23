@@ -4,7 +4,6 @@
 </h1>
 
 My personal website built with Gatsby.
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ### Built with
 - Gatsby
