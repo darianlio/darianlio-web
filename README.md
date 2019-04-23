@@ -6,8 +6,8 @@
 My personal website built with Gatsby.
 
 ### Built with
-- Gatsby
-- React
+- <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a>
+- <a href="https://github.com/facebook/react">React</a>
 
 
 ### Starting point
