@@ -1,22 +1,23 @@
-import React, {Component} from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 
-import Layout from "@components/layout"
-import Hero from "@components/hero"
-import About from "@components/about"
-import Experience from "@components/experience"
-import Projects from "@components/projects"
-import Contact from "@components/contact"
+import Layout from "../components/layout"
+import Hero from "../components/hero"
+import About from "../components/about"
+import Experience from "../components/experience"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
+import "../styles/index.scss"
 
 const IndexPage = ({data, location}) => (
   <Layout location={location}>
     <div className="mainContainer" id="content">
       <Hero data={data.hero.edges}/>
-      <About data={data.hero.edges}/>
-      <Experience data={data.hero.edges}/>
-      <Projects data={data.hero.edges}/>
-      <Contact data={data.hero.edges}/>
+      <About data={data.about.edges}/>
+      <Experience data={data.experience.edges}/>
+      <Projects data={data.projects.edges}/>
+      <Contact data={data.contact.edges}/>
     </div>
   </Layout>
 );
@@ -26,11 +27,11 @@ IndexPage.propTypes = {
   location: PropTypes.object,
 };
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query IndexQuery {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/"}}){
+    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
       edges {
         node {
           frontmatter {
@@ -43,18 +44,12 @@ export const query = graphql`
         }
       }
     }
-    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/"}}){
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
       edges {
         node {
           frontmatter {
             title
-            avatar {
-              childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
+            avatar
             skills
           }
           html
@@ -62,9 +57,9 @@ export const query = graphql`
       }
     }
     experience: allMarkdownRemark(
-      filter: {fileAbsolutePath: { regex: "/experience/"}}
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
       sort: { fields: [frontmatter___date], order: DESC }
-    ){
+    ) {
       edges {
         node {
           frontmatter {
@@ -79,9 +74,9 @@ export const query = graphql`
       }
     }
     projects: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/"}}
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
       sort: { fields: [frontmatter___date], order: DESC }
-    ){
+    ) {
       edges {
         node {
           frontmatter {
@@ -94,7 +89,7 @@ export const query = graphql`
         }
       }
     }
-    contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/"}}){
+    contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
       edges {
         node {
           frontmatter {

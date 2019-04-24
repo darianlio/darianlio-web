@@ -1,0 +1,39 @@
+h1 {
+  color: green;
+  margin: 0 0 20px 3px;
+  font-size: 16px;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: normal;
+}
+
+.heroContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    div {
+        width: 100%;
+    }
+}
+
+h2 {
+    font-size: 80px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h3 {
+    font-size: 80px;
+    line-height: 1.1;
+    color: pink;
+}
+
+h4 {
+    margin-top: 25px;
+    width: 50%;
+    max-width: 500px;
+}
+
+a {
+    font-size: 15px;
+    margin-top: 50px;
+}

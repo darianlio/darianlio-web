@@ -1,6 +1,6 @@
 ---
 date: '2017-04-11'
-title: 'AutonomousRobot'
+title: 'Autonomous Robot'
 image: ''
 tech:
   - Arduino

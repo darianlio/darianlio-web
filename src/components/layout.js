@@ -8,10 +8,10 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import {navLinks} from '@config';
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.scss"
 
 class Layout extends Component {
   static propTypes = {
@@ -24,24 +24,23 @@ class Layout extends Component {
 
     return (
       <StaticQuery
-        query = {graphql`
+        query={graphql`
           query LayoutQuery {
             site {
               siteMetadata {
                 title
-                siteUrl
-                description
               }
             }
           }
         `}
-        render={({site}) => (
+        render={({ site }) => (
           <div id="root">
-            <Head metadata={site.siteMetaData}/>
-            <div className="container">
-              {location && navLinks && <Header location={location} navLinks={navLinks}/>}
-              <Footer/>
-            </div>
+            <Head metadata={site.siteMetadata} />
+              <div className="container">
+                {location && navLinks && <Header location={location} navLinks={navLinks} />}
+                {children}
+                <Footer />
+              </div>
           </div>
         )}
       />
