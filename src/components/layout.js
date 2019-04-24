@@ -37,7 +37,6 @@ class Layout extends Component {
           <div id="root">
             <Head metadata={site.siteMetadata} />
               <div className="container">
-                {location && navLinks && <Header location={location} navLinks={navLinks} />}
                 {children}
                 <Footer />
               </div>

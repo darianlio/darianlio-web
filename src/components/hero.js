@@ -22,24 +22,15 @@ class Hero extends Component {
 
     render() {
         const { data } = this.props;
-        const { isMounted } = this.state;
         const { frontmatter, html } = data[0].node;
-
-        const one = () => <h1>{frontmatter.title}</h1>;
-        const two = () => <h2>{frontmatter.name}</h2>;
-        const three = () => <h3>{frontmatter.subtitle}</h3>;
-        const four = () => <h4 dangerouslySetInnerHTML={{__html: html}}/>;
-        const five = () => <div><a href={`mailto:${email}`}>Contact Me Today!</a></div>
-
-        const items = [one, two, three, four, five];
 
         return (
             <div className="heroContainer">
-                {isMounted && items.map((item, i)=>(
-                    <div key={i}>
-                        {item}
-                        </div>
-                    ))}
+                <h1>{frontmatter.title}</h1>
+                <h2>{frontmatter.name}</h2>
+                <h3>{frontmatter.subtitle}</h3>
+                <div dangerouslySetInnerHTML={{__html: html}}></div>
+                <div><a href={`mailto:${email}`}>Contact Me Today!</a></div>
             </div>
         );
     }
