@@ -10,16 +10,6 @@ const path = require('path');
 exports.onCreateWebpackConfig = ({
     stage, getConfig, rules, loaders, actions
    }) => {
-     actions.setWebpackConfig({
-       module: {
-         rules: [
-           {
-             test: 'my-css',
-             use: [loaders.style(), loaders.css()]
-           },
-         ],
-       },
-     });
 
    actions.setWebpackConfig({
     resolve: {
