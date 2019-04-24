@@ -13,6 +13,6 @@ skills:
   - GraphQL
 ---
 
-Hi! I am Darian Lio. I am a software developer from Toronto, CA.
+Hi! I am Darian Lio. I am a software developer from Toronto, ON. 
 
 Skills:
