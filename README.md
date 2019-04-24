@@ -1,4 +1,5 @@
-## Darian Lio's Web
+## Darian Lio's Website V3
+My personal website utilizing Gatsby and React!
 
 ## Built with
 - React
