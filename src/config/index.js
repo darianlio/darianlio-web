@@ -42,5 +42,5 @@ module.exports = {
     },
   ],
 
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-138972191-1',
 }
