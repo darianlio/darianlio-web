@@ -10,8 +10,8 @@ import Projects from "../components/projects"
 import Contact from "../components/contact"
 import "../styles/index.scss"
 
-const IndexPage = ({data, location}) => (
-  <Layout location={location}>
+const IndexPage = ({data}) => (
+  <Layout>
     <div className="mainContainer" id="content">
       <Hero data={data.hero.edges}/>
       <About data={data.about.edges}/>
@@ -24,7 +24,6 @@ const IndexPage = ({data, location}) => (
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
-  location: PropTypes.object,
 };
 
 export default IndexPage;

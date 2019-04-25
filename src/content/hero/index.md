@@ -1,8 +1,8 @@
 ---
-title: 'Hello world, my name is'
+title: "Hi, it's"
 name: 'Darian Lio'
-subtitle: 'Software Engineer'
-contactText: 'Contact Me Today'
+subtitle: 'Aspiring Software Engineer'
+contactText: 'View Resume'
 ---
 
-I'm a software engineer based in Toronto, ON specializing in developing websites and applications.
+I'm currently a software developer intern based in Toronto, ON.

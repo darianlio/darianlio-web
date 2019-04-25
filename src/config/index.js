@@ -23,24 +23,5 @@ module.exports = {
       }
   ],
 
-  navLinks: [
-      {
-          name: 'About',
-          url: '#about',
-      },
-      {
-        name: 'Experience',
-        url: '#experience',
-    },
-    {
-        name: 'Projects',
-        url: '#about',
-    },
-    {
-        name: 'About',
-        url: '#about',
-    },
-  ],
-
   googleAnalyticsID: 'UA-138972191-1',
 }

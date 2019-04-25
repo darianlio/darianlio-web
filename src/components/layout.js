@@ -8,7 +8,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import {navLinks} from '@config';
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
@@ -16,11 +15,10 @@ import Footer from "./footer"
 class Layout extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    location: PropTypes.object.isRequired,
   };
 
   render() {
-    const { children, location} = this.props;
+    const { children } = this.props;
 
     return (
       <StaticQuery
@@ -36,6 +34,7 @@ class Layout extends Component {
         render={({ site }) => (
           <div id="root">
             <Head metadata={site.siteMetadata} />
+              <Header/>
               <div className="container">
                 {children}
                 <Footer />

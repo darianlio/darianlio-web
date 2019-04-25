@@ -1,24 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { email } from '../config';
+import resume from "../images/resume.pdf"
 import "./hero.scss"
 
 class Hero extends Component {
     static propTypes = {
         data: PropTypes.array.isRequired,
     };
-
-    state = {
-        isMounted: false,
-    };
-
-    componentDidMount() {
-        setTimeout(() => this.setState({ isMounted: true }), 1000);
-    }
-
-    componentWillUnmount() {
-        this.setState({ isMounted: false });
-    }
 
     render() {
         const { data } = this.props;
@@ -30,7 +18,7 @@ class Hero extends Component {
                 <h2>{frontmatter.name}</h2>
                 <h3>{frontmatter.subtitle}</h3>
                 <div dangerouslySetInnerHTML={{__html: html}}></div>
-                <div><a href={`mailto:${email}`}>Contact Me Today!</a></div>
+                <a href={resume} target="__blank" rel="nofollow noopener noreferrer" className="main-btn">View Resume</a>
             </div>
         );
     }
