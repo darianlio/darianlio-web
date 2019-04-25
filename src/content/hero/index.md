@@ -5,4 +5,4 @@ subtitle: 'Aspiring Software Engineer'
 contactText: 'View Resume'
 ---
 
-I'm currently a software developer intern based in Toronto, ON.
+Currently based in Toronto, Ontario, Canada.

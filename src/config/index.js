@@ -20,6 +20,14 @@ module.exports = {
       {
           name: 'Instagram',
           url: 'https://www.instagram.com/notdurian/',
+      },
+      {
+          name: 'Email',
+          url: 'mailto:darianlio97@gmail.com'
+      },
+      {
+          name: 'Location',
+          url: 'https://www.google.com/maps/place/Toronto,+ON/@43.6565353,-79.6010302,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843'
       }
   ],
 

@@ -73,7 +73,6 @@ body {
     cursor: pointer;
     &:hover,
     &:focus {
-      color: green;
       outline: 0;
     }
   }
@@ -111,7 +110,7 @@ body {
   }
 
 .mainContainer {
-    padding: 0 150px;
+    padding: 0 300px;
     margin: 0 auto;
     width: 100%;
     counter-reset: section;
