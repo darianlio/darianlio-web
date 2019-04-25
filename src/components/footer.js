@@ -9,7 +9,7 @@ const Footer = () => (
       <div className="contactContainer">
         <div className="emailContainer">
           <h1>Email</h1>
-          <i class="far fa-envelope" />
+          <i className="far fa-envelope" />
           <a
             href="mailto:darianlio97@gmail.com"
             rel="nofollow noopener noreferrer"
@@ -20,7 +20,7 @@ const Footer = () => (
         </div>
         <div className="locationContainer">
           <h1>Location</h1>
-          <i class="fas fa-map-marker-alt" />
+          <i className="fas fa-map-marker-alt" />
           <a
             href="https://www.google.com/maps/place/Toronto,+ON/@43.6565353,-79.6010302,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843"
             target="__blank"
@@ -44,11 +44,11 @@ const Footer = () => (
                 aria-label={name}
               >
                 {name === "Github" ? (
-                  <i class="fab fa-github" />
+                  <i className="fab fa-github" />
                 ) : name === "Linkedin" ? (
-                  <i class="fab fa-linkedin-in" />
+                  <i className="fab fa-linkedin-in" />
                 ) : (
-                  <i class="fab fa-instagram" />
+                  <i className="fab fa-instagram" />
                 )}
               </a>
             </li>

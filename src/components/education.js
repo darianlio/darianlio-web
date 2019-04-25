@@ -1,15 +1,14 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import "./experience.scss"
 
-class Experience extends Component {
+class Education extends Component {
   render() {
     return (
       <div>
-        <h1>Experience</h1>
+        <h1>Education</h1>
       </div>
     )
   }
 }
 
-export default Experience
+export default Education

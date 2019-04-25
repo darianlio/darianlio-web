@@ -6,27 +6,29 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
 import Experience from "../components/experience"
+import Education from "../components/education"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
 import "../styles/index.scss"
 
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <Layout>
     <div className="mainContainer" id="content">
-      <Hero data={data.hero.edges}/>
-      <About data={data.about.edges}/>
-      <Experience data={data.experience.edges}/>
-      <Projects data={data.projects.edges}/>
-      <Contact data={data.contact.edges}/>
+      <Hero data={data.hero.edges} />
+      <About data={data.about.edges} />
+      <Experience data={data.experience.edges} />
+      <Education data={data.education.edges} />
+      <Projects data={data.projects.edges} />
+      <Contact data={data.contact.edges} />
     </div>
   </Layout>
-);
+)
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
-};
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
@@ -43,7 +45,9 @@ export const query = graphql`
         }
       }
     }
-    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
       edges {
         node {
           frontmatter {
@@ -72,6 +76,21 @@ export const query = graphql`
         }
       }
     }
+    education: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/education/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            school
+            range
+          }
+          html
+        }
+      }
+    }
     projects: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/projects/" } }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -88,7 +107,9 @@ export const query = graphql`
         }
       }
     }
-    contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
+    contact: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/contact/" } }
+    ) {
       edges {
         node {
           frontmatter {
@@ -99,4 +120,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
