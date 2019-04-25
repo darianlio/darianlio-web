@@ -84,7 +84,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            school
+            company
             range
           }
           html
