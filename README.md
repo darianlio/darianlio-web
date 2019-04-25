@@ -18,7 +18,9 @@ My personal website utilizing Gatsby and React!
 - gatsby-transformer-sharp
 - gatsby-plugin-google-analytics
 - gatsby-plugin-google-fonts
+- gatsby-plugin-sass
 - prop-types
+- node-sass
 - react
 - react-dom
 - react-helmet
