@@ -12,4 +12,4 @@ tech:
 show: 'true'
 ---
 
-Web app that collects the price history of a given stock or crypto currency symbol with the selected time series. Visualizes the price history in a line graph and make predictions for the next 10 iterations in the selected time series.
+Web app that collects the price history of a given stock or crypto currency symbol with the selected time series. Visualizes the price history in a line graph and make predictions.
