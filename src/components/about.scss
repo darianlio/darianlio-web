@@ -1,7 +1,7 @@
 .aboutContainer {
   position: relative;
-  margin: 0 0;
-  padding: 0 50px 150px 50px;
+  margin: 0 auto;
+  padding: 0 0 150px 0;
   max-width: 1000px;
 
   .aboutHeading {
@@ -11,7 +11,8 @@
     margin: 10px 0 40px;
     width: 100%;
     white-space: nowrap;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 700;
   }
 
   .aboutFlexContainer {
@@ -23,6 +24,7 @@
       width: 60%;
       max-width: 500px;
       font-size: 17px;
+      letter-spacing: 1px;
       .skillsContainer {
         display: grid;
         grid-template-columns: repeat(2, minmax(140px, 200px));

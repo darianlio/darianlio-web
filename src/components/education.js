@@ -23,11 +23,11 @@ class Education extends Component {
       >
         <div className="education-title">Education</div>
         {data &&
-          data.map(({ node }) => {
+          data.map(({ node }, i) => {
             const { frontmatter } = node
             const { title, company, range } = frontmatter
             return (
-              <div className="container">
+              <div key={i} className="container">
                 <div className="school-title">
                   <span>{title}</span>
                   <span className="range">{range}</span>

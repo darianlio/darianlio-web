@@ -47,6 +47,8 @@ const TabContent = styled.div`
   z-index: ${props => (props.isActive ? 2 : -1)};
   position: ${props => (props.isActive ? "relative" : "absolute")};
   visibility: ${props => (props.isActive ? "visible" : "hidden")};
+  transition: 650ms ease;
+  transition-duration: ${props => (props.isActive ? "0.5s" : "0s")};
 `
 
 class Experience extends Component {
@@ -75,6 +77,7 @@ class Experience extends Component {
         className="experience-container"
         id="experience"
         ref={el => (this.experience = el)}
+        ref={this.experience}
       >
         <div className="experience-title">Where I&apos;ve Worked</div>
         <div className="tabs-container">

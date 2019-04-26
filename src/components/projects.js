@@ -11,6 +11,7 @@ class Projects extends Component {
 
   constructor(props) {
     super(props)
+    this.revealRefs = []
   }
 
   state = {
@@ -19,6 +20,7 @@ class Projects extends Component {
 
   componentDidMount() {
     sr.reveal(this.projects, srConfig())
+    this.revealRefs.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)))
   }
 
   showMoreToggle = () => this.setState({ showMore: !this.state.showMore })
@@ -44,8 +46,22 @@ class Projects extends Component {
               const { frontmatter, html } = node
               const { title, tech } = frontmatter
               return (
-                <div key={i} exit="false">
-                  <div className="project" key={i} tabIndex="0">
+                <div
+                  key={i}
+                  timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
+                  exit="false"
+                >
+                  <div
+                    className="project"
+                    key={i}
+                    ref={el => (this.revealRefs[i] = el)}
+                    style={{
+                      transitionDelay: `${
+                        i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0
+                      }ms`,
+                    }}
+                    tabIndex="0"
+                  >
                     <div className="project-inner">
                       <div>
                         <div className="project-header">

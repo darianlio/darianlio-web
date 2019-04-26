@@ -8,6 +8,8 @@ a {
   flex-direction: column;
   text-align: center;
   position: relative;
+  opacity: 0;
+  animation: 0.5s fade 0.5s forwards;
 }
 
 #logo {

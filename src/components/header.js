@@ -37,19 +37,29 @@ class Header extends Component {
           <div className={`overlay ${navActive}`}>
             <ul>
               <li>
-                <a href="#about">About</a>
+                <a href="#about" onClick={this.scrollToContent}>
+                  About
+                </a>
               </li>
               <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" onClick={this.scrollToContent}>
+                  Experience
+                </a>
               </li>
               <li>
-                <a href="#education">Education</a>
+                <a href="#education" onClick={this.scrollToContent}>
+                  Education
+                </a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" onClick={this.scrollToContent}>
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" onClick={this.scrollToContent}>
+                  Contact
+                </a>
               </li>
             </ul>
           </div>

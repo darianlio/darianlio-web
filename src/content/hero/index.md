@@ -1,7 +1,7 @@
 ---
 title: "Hi, it's"
 name: 'Darian Lio'
-subtitle: 'Aspiring Software Engineer'
+subtitle: 'Software Engineer'
 contactText: 'View Resume'
 ---
 

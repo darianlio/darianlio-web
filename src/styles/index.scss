@@ -118,8 +118,42 @@ ol {
 }
 
 .mainContainer {
-  padding: 0 300px;
+  padding: 0 150px;
   margin: 0 auto;
   width: 100%;
   counter-reset: section;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
