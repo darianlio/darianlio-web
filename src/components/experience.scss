@@ -1,0 +1,64 @@
+.experience-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 150px 0;
+  max-width: 700px;
+  .experience-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 40px;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 25px;
+  }
+  .tabs-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    .tabs {
+      display: block;
+      position: relative;
+      width: max-content;
+      z-index: 3;
+      .tab {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        height: 42px;
+        padding: 0 20px 2px;
+        border-left: 2px solid #ccc;
+        text-align: left;
+        transition: 650ms ease;
+        white-space: nowrap;
+        font-size: 14px;
+        &:hover,
+        &:focus {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+  .content-container {
+    position: relative;
+    padding-left: 30px;
+    flex-grow: 1;
+  }
+  .job-title {
+    font-size: 20px;
+    width: 100%;
+    .company {
+    }
+  }
+  .job-details {
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    color: #444;
+    margin-bottom: 30px;
+    svg {
+      width: 15px;
+    }
+  }
+}

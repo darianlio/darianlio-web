@@ -1,7 +1,7 @@
-.contactContainer {
+.contact-container {
   margin: 0 auto;
   padding: 150px 0;
-  max-width: 1000px;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +13,10 @@
     letter-spacing: 1px;
     margin: 0 auto 50px;
     font-size: 30px;
+  }
+
+  .contactDetails {
+    text-align: center;
   }
 
   .contactbtn {

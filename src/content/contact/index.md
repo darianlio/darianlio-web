@@ -1,5 +1,4 @@
 ---
-title: 'Let's Get In Touch'
+title: "Let's Get In Touch"
 ---
-
-Let us get in touch! I am always meeting new people and working on new and exciting potential projects. Shoot me an email!
+I am always excited to meet new people and look for new initiatives. If you have any questions, want to chat, or collaborate, shoot me an email or find me on social media!

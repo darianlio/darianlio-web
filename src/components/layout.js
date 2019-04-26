@@ -11,14 +11,15 @@ import { StaticQuery, graphql } from "gatsby"
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
+import "../styles/index.scss"
 
 class Layout extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-  };
+  }
 
   render() {
-    const { children } = this.props;
+    const { children } = this.props
 
     return (
       <StaticQuery
@@ -34,15 +35,15 @@ class Layout extends Component {
         render={({ site }) => (
           <div id="root">
             <Head metadata={site.siteMetadata} />
-              <Header/>
-              <div className="container">
-                {children}
-                <Footer />
-              </div>
+            <Header />
+            <div className="container">
+              {children}
+              <Footer />
+            </div>
           </div>
         )}
       />
-    );
+    )
   }
 }
 

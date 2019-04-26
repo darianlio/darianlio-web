@@ -34,13 +34,13 @@ class Projects extends Component {
               const { frontmatter, html } = node
               const { title, tech } = frontmatter
               return (
-                <div key={i} exit={false}>
+                <div key={i} exit="false">
                   <div className="project" key={i} tabIndex="0">
                     <div className="project-inner">
                       <div>
                         <div className="project-header">
                           <div className="folder">
-                            <i class="far fa-folder-open" />
+                            <i className="far fa-folder-open" />
                           </div>
                         </div>
                         <h5 className="project-name">{title}</h5>

@@ -29,6 +29,7 @@
       &:focus {
         outline: 0;
         .project-inner {
+          transition: 650ms ease;
           transform: translateY(-5px);
           box-shadow: 0 2px 4px #b0b0b2;
           box-shadow: 0 19px 38px #b0b0b2 15px 12px #b0b0b2;
@@ -36,20 +37,20 @@
       }
 
       .project-inner {
+        transition: 650ms ease;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         padding: 25px;
-        height: 40vh;
+        height: 42vh;
         border-radius: 2px;
         background-color: #8f8f8f;
 
         .project-header {
           display: flex;
           justify-content: space-between;
-
           align-items: flex-end;
           margin-bottom: 30px;
 
@@ -72,32 +73,6 @@
         .project-description {
           font-size: 15px;
           color: #fff;
-          a {
-            display: inline-block;
-            text-decoration: none;
-            text-decoration-skip-ink: auto;
-            position: relative;
-            cursor: pointer;
-            color: #f9a83e;
-            &:hover,
-            &:focus,
-            &:active {
-              color: #f9a83e;
-              outline: 0;
-              &:after {
-                width: 100%;
-              }
-            }
-            &:after {
-              content: "";
-              display: block;
-              width: 0;
-              height: 1px;
-              position: relative;
-              bottom: 0.37em;
-              background-color: #f9a83e;
-            }
-          }
         }
         .tech-list {
           flex-grow: 1;

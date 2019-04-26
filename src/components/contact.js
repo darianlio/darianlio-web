@@ -18,16 +18,18 @@ class Contact extends Component {
     const { title } = frontmatter
 
     return (
-      <div className="contactContainer">
+      <div className="contact-container" id="contact">
         <div className="contactTitle">{title}</div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          className="contactDetails"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         <a
           className="contactbtn"
           href={`mailto:${email}`}
-          target="_blank"
           rel="nofollow noopener noreferrer"
         >
-          Get in Touch{" "}
+          Contact Me
         </a>
       </div>
     )
