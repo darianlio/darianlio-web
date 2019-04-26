@@ -39,7 +39,9 @@ class Projects extends Component {
                     <div className="project-inner">
                       <div>
                         <div className="project-header">
-                          <div className="folder">Folder</div>
+                          <div className="folder">
+                            <i class="far fa-folder-open" />
+                          </div>
                         </div>
                         <h5 className="project-name">{title}</h5>
                         <div

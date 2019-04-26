@@ -44,7 +44,7 @@
         padding: 25px;
         height: 40vh;
         border-radius: 2px;
-        background-color: #b0b0b2;
+        background-color: #8f8f8f;
 
         .project-header {
           display: flex;
@@ -54,7 +54,7 @@
           margin-bottom: 30px;
 
           .folder {
-            color: #ffd208;
+            color: #ffa551;
             font-weight: 700;
             svg {
               width: 40px;
@@ -120,6 +120,12 @@
     }
   }
   .showMoreButton {
-    margin: 100px auto 0;
+    margin: 50px auto 0;
+    border: 2px solid #72788d;
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #72788d;
   }
 }
