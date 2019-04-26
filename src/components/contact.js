@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { email } from "@config"
+import sr from "../utils/sr"
+import { email, srConfig } from "@config"
 import "./contact.scss"
 
 class Contact extends Component {
@@ -12,13 +13,21 @@ class Contact extends Component {
     super(props)
   }
 
+  componentDidMount() {
+    sr.reveal(this.contact, srConfig())
+  }
+
   render() {
     const { data } = this.props
     const { frontmatter, html } = data[0].node
     const { title } = frontmatter
 
     return (
-      <div className="contact-container" id="contact">
+      <div
+        className="contact-container"
+        id="contact"
+        ref={el => (this.contact = el)}
+      >
         <div className="contactTitle">{title}</div>
         <div
           className="contactDetails"

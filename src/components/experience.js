@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import sr from "../utils/sr"
+import { srConfig } from "../config/index"
 import "./experience.scss"
 
 const Highlighter = styled.span`
@@ -56,6 +58,10 @@ class Experience extends Component {
     activeTabId: 0,
   }
 
+  componentDidMount() {
+    sr.reveal(this.experience, srConfig())
+  }
+
   isActive = id => this.state.activeTabId === id
 
   setActiveTab = activeTabId => this.setState({ activeTabId })
@@ -68,7 +74,7 @@ class Experience extends Component {
       <div
         className="experience-container"
         id="experience"
-        ref={el => (this.jobs = el)}
+        ref={el => (this.experience = el)}
       >
         <div className="experience-title">Where I&apos;ve Worked</div>
         <div className="tabs-container">

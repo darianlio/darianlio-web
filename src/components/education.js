@@ -1,20 +1,41 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import sr from "../utils/sr"
+import { srConfig } from "../config/index"
+import "./education.scss"
 
 class Education extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
   }
 
+  componentDidMount() {
+    sr.reveal(this.education, srConfig())
+  }
+
   render() {
     const { data } = this.props
-    const { frontmatter } = data[0].node
-    const { title, company, range } = frontmatter
     return (
-      <div id="experience">
-        <h1>{title}</h1>
-        <span>{company}</span>
-        <span>{range}</span>
+      <div
+        className="education-container"
+        id="education"
+        ref={el => (this.education = el)}
+      >
+        <div className="education-title">Education</div>
+        {data &&
+          data.map(({ node }) => {
+            const { frontmatter } = node
+            const { title, company, range } = frontmatter
+            return (
+              <div className="container">
+                <div className="school-title">
+                  <span>{title}</span>
+                  <span className="range">{range}</span>
+                </div>
+                <div className="school">{company}</div>
+              </div>
+            )
+          })}
       </div>
     )
   }

@@ -1,10 +1,16 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import sr from "../utils/sr"
+import { srConfig } from "../config/index"
 import "./about.scss"
 
 class About extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
+  }
+
+  componentDidMount() {
+    sr.reveal(this.about, srConfig())
   }
 
   render() {
@@ -13,7 +19,7 @@ class About extends Component {
     const { title, skills, avatar } = frontmatter
 
     return (
-      <div className="aboutContainer" id="about">
+      <div className="aboutContainer" id="about" ref={el => (this.about = el)}>
         <div className="aboutHeading">{title}</div>
         <div className="aboutFlexContainer">
           <div className="aboutContentContainer">

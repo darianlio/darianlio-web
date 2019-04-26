@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import sr from "../utils/sr"
+import { srConfig } from "../config/index"
 import "./projects.scss"
 
 class Projects extends Component {
@@ -15,6 +17,10 @@ class Projects extends Component {
     showMore: false,
   }
 
+  componentDidMount() {
+    sr.reveal(this.projects, srConfig())
+  }
+
   showMoreToggle = () => this.setState({ showMore: !this.state.showMore })
 
   render() {
@@ -26,7 +32,11 @@ class Projects extends Component {
     const projectsToShow = showMore ? projects : firstSix
 
     return (
-      <div className="project-container" id="projects">
+      <div
+        className="project-container"
+        id="projects"
+        ref={el => (this.projects = el)}
+      >
         <h4 className="project-title">Projects</h4>
         <div className="project-grid">
           {projectsToShow &&
