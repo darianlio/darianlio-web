@@ -7,9 +7,10 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: relative;
+  position: absolute;
   opacity: 0;
   animation: 0.5s fade 0.5s forwards;
+  z-index: 999;
 }
 
 #logo {
@@ -21,9 +22,12 @@ a {
   border-bottom: 1px solid #72788d;
   margin-bottom: -5px;
   float: left;
+  z-index: 999;
+  position: fixed;
 }
 
 .hamburger {
+  z-index: 999;
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
@@ -76,9 +80,9 @@ a {
 .menu {
   position: fixed;
   top: 3rem;
-  right: 3rem;
+  right: 2rem;
   //background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9999;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -86,6 +90,7 @@ a {
 button:focus {
   outline: none;
   text-decoration: none;
+  z-index: 999;
 }
 
 .hamburger-inner,
@@ -99,6 +104,7 @@ button:focus {
   transition-property: transform;
   transition-duration: 0.15s;
   transition-timing-function: ease;
+  z-index: 99;
 }
 
 .hamburger--slider {
@@ -138,6 +144,7 @@ button:focus {
   height: 6rem;
   line-height: 6rem;
   position: relative;
+  z-index: 99;
 
   .overlay {
     ul {
@@ -195,6 +202,7 @@ button:focus {
     color: #72788d;
     display: block;
     font-size: 1rem;
+    position: relative;
   }
   .navbar {
     display: flex;

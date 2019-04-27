@@ -77,7 +77,6 @@ class Experience extends Component {
         className="experience-container"
         id="experience"
         ref={el => (this.experience = el)}
-        ref={this.experience}
       >
         <div className="experience-title">Where I&apos;ve Worked</div>
         <div className="tabs-container">

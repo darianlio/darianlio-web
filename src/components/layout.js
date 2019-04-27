@@ -18,35 +18,6 @@ class Layout extends Component {
     children: PropTypes.node.isRequired,
   }
 
-  constructor(props) {
-    super(props)
-    this.about = React.createRef()
-    this.experience = React.createRef()
-    this.education = React.createRef()
-    this.projects = React.createRef()
-    this.contact = React.createRef()
-    this.scrollToContent = this.scrollToContent.bind(this)
-  }
-
-  scrollToContent(content) {
-    //.current is verification that your element has rendered
-    this.about.current.scrollIntoView({
-      behavior: "smooth",
-    })
-    this.experience.current.scrollIntoView({
-      behavior: "smooth",
-    })
-    this.education.current.scrollIntoView({
-      behavior: "smooth",
-    })
-    this.projects.current.scrollIntoView({
-      behavior: "smooth",
-    })
-    this.contact.current.scrollIntoView({
-      behavior: "smooth",
-    })
-  }
-
   render() {
     const { children } = this.props
 

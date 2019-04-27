@@ -1,5 +1,14 @@
 import React from "react"
-import PropTypes from "prop-types"
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
+
 import { socialMedia } from "@config"
 import "./footer.scss"
 
@@ -58,19 +67,64 @@ const Footer = () => (
       <div className="footNavContainer">
         <ul>
           <li>
-            <a href="#about">About</a>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <Link
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Experience
+            </Link>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <Link
+              activeClass="active"
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Education
+            </Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

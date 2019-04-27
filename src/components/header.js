@@ -1,4 +1,13 @@
 import React, { Component } from "react"
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
 import "./header.scss"
 
 class Header extends Component {
@@ -8,10 +17,30 @@ class Header extends Component {
       menu: false,
     }
     this.toggleMenu = this.toggleMenu.bind(this)
+    this.scrollToTop = this.scrollToTop.bind(this)
+  }
+
+  componentDidMount() {
+    Events.scrollEvent.register("begin", function() {
+      console.log("begin", arguments)
+    })
+
+    Events.scrollEvent.register("end", function() {
+      console.log("end", arguments)
+    })
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop()
   }
 
   toggleMenu() {
     this.setState({ menu: !this.state.menu })
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove("begin")
+    Events.scrollEvent.remove("end")
   }
 
   render() {
@@ -37,29 +66,64 @@ class Header extends Component {
           <div className={`overlay ${navActive}`}>
             <ul>
               <li>
-                <a href="#about" onClick={this.scrollToContent}>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#experience" onClick={this.scrollToContent}>
+                <Link
+                  activeClass="active"
+                  to="experience"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   Experience
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#education" onClick={this.scrollToContent}>
+                <Link
+                  activeClass="active"
+                  to="education"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   Education
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#projects" onClick={this.scrollToContent}>
+                <Link
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" onClick={this.scrollToContent}>
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
