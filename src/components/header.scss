@@ -167,9 +167,11 @@ button:focus {
           margin-top: 50px;
           display: block;
           font-size: 1rem;
+          letter-spacing: 1px;
           transition: all 650ms ease;
           &:hover {
-            color: #234c93;
+            color: #a1dabd;
+            transition: all 650ms ease;
           }
         }
       }

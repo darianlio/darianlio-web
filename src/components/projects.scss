@@ -44,7 +44,7 @@
         align-items: flex-start;
         position: relative;
         padding: 25px;
-        height: 42vh;
+        height: 36vh;
         border-radius: 5px;
         background-color: #707281;
 
@@ -65,12 +65,16 @@
         }
 
         .project-name {
+          font-family: "lato", "sans-serif";
+          letter-spacing: 1px;
           margin: 0 0 10px;
-          font-size: 19px;
+          font-size: 17px;
           color: #fff;
         }
 
         .project-description {
+          font-family: "muli", "sans-serif";
+          letter-spacing: 0.5px;
           font-size: 15px;
           color: #fff;
         }
@@ -85,6 +89,7 @@
             font-size: 14px;
             color: #fff;
             line-height: 1.75;
+            letter-spacing: 0.5px;
             margin-right: 15px;
             &:last-of-type {
               margin-right: 0;
