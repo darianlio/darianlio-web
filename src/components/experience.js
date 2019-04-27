@@ -7,7 +7,7 @@ import "./experience.scss"
 
 const Highlighter = styled.span`
   display: block;
-  background: #666;
+  background: rgb(141, 216, 171);
   width: 2px;
   height: 42px;
   border-radius: 2px;

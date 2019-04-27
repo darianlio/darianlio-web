@@ -23,20 +23,23 @@
       width: max-content;
       z-index: 3;
       .tab {
+        font-family: "muli", "sans-serif";
+        font-weight: 300;
         display: flex;
         align-items: center;
         width: 100%;
         background-color: transparent;
         height: 42px;
         padding: 0 20px 2px;
-        border-left: 2px solid #ccc;
+        border-left: 2px solid rgb(224, 224, 224);
         text-align: left;
         transition: 650ms ease;
+        letter-spacing: 2px;
         white-space: nowrap;
         font-size: 14px;
         &:hover,
         &:focus {
-          background-color: #ddd;
+          background-color: rgb(214, 214, 214);
         }
       }
     }

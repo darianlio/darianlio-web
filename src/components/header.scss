@@ -150,6 +150,12 @@ button:focus {
         float: left;
         z-index: 999;
         position: fixed;
+        transition: 650ms ease;
+
+        &:hover {
+          filter: sepia(80%) contrast(80%) saturate(50) hue-rotate(145deg);
+          transition: 650ms ease;
+        }
       }
     }
   }

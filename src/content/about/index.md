@@ -20,4 +20,4 @@ I am a fourth-year undergraduate majoring in Computer Engineering at Queen's Uni
 
 Outside of work, I am probably stuck playing music on my guitar, going to the gym, travelling, or playing video games with friends!
 
-Skills:
+Here are a few of my skills:
