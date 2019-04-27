@@ -1,9 +1,10 @@
 .mainContainer {
   padding: 0;
   .heroBg {
-    background: url(https://source.unsplash.com/onLbXleIkds/2560x1440) no-repeat;
+    background: url(https://source.unsplash.com/2COrlBb8KyQ/2560x1440) no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: calc(100%) calc(100% + 500px);
+    background-attachment: fixed;
     height: 100vh;
     opacity: 0;
     animation: 0.5s fade 0.5s forwards;

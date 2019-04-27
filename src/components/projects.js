@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import sr from "../utils/sr"
 import { srConfig } from "../config/index"
@@ -44,7 +45,7 @@ class Projects extends Component {
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => {
               const { frontmatter, html } = node
-              const { title, tech } = frontmatter
+              const { title, image, tech } = frontmatter
               return (
                 <div
                   key={i}
@@ -63,7 +64,12 @@ class Projects extends Component {
                     tabIndex="0"
                   >
                     <div className="project-inner">
-                      <div>
+                      <Img
+                        className="projectImage"
+                        fluid={image.childImageSharp.fluid}
+                        alt="Avatar"
+                      />
+                      <div className="project-overlay">
                         <div className="project-header">
                           <div className="folder">
                             <i className="far fa-folder-open" />

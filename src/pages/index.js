@@ -109,7 +109,17 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 50) {
+                  src
+                  srcSet
+                  aspectRatio
+                  sizes
+                  base64
+                }
+              }
+            }
             tech
             show
           }
