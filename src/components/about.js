@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
 import sr from "../utils/sr"
 import { srConfig } from "../config/index"
 import "./about.scss"
@@ -35,7 +36,7 @@ class About extends Component {
           </div>
           <div className="aboutPicContainer">
             <div className="aboutAvatarContainer">
-              <p>Image</p>
+              <Img fluid={avatar.childImageSharp.fluid} alt="Avatar" />
             </div>
           </div>
         </div>
