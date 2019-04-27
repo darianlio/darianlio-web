@@ -54,12 +54,12 @@ export const query = graphql`
             title
             avatar {
               childImageSharp {
-                fluid(
-                  maxWidth: 700
-                  quality: 90
-                  traceSVG: { color: "#64ffda" }
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                fluid(maxWidth: 500, quality: 50) {
+                  src
+                  srcSet
+                  aspectRatio
+                  sizes
+                  base64
                 }
               }
             }

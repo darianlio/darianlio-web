@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-
+import favicon from "@images/favicon.ico"
+import favicon16x16 from "@images/favicon-32x32.png"
+import favicon32x32 from "@images/favicon-32x32.png"
+import appleIcon180x180 from "@images/apple-touch-icon.png"
 const config = require("../config")
 
 const Head = ({ metadata }) => (
@@ -10,6 +13,11 @@ const Head = ({ metadata }) => (
     <title itemProp="name" lang="en">
       {metadata.title}
     </title>
+    <link rel="apple-touch-icon" sizes="180x180" href={appleIcon180x180} />
+    <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32} />
+    <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
+    <link rel="shortcut icon" href={favicon} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={metadata.description} />
     <meta name="keywords" content={config.siteKeywords} />
     <meta property="og:title" content={metadata.title} />

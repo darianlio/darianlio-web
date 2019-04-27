@@ -13,19 +13,6 @@ a {
   z-index: 999;
 }
 
-#logo {
-  display: block;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin: 68px;
-  line-height: 1rem;
-  border-bottom: 1px solid #72788d;
-  margin-bottom: -5px;
-  float: left;
-  z-index: 999;
-  position: fixed;
-}
-
 .hamburger {
   z-index: 999;
   padding: 15px 15px;
@@ -146,6 +133,27 @@ button:focus {
   position: relative;
   z-index: 99;
 
+  .logoContainer {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    .logoLink {
+      #logo {
+        width: 45px;
+        height: 45px;
+        display: block;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin: 50px;
+        line-height: 1rem;
+        margin-bottom: -5px;
+        float: left;
+        z-index: 999;
+        position: fixed;
+      }
+    }
+  }
+
   .overlay {
     ul {
       position: relative;
@@ -196,19 +204,28 @@ button:focus {
     display: none;
   }
 
-  #logo {
-    margin: 0;
-    line-height: 6.6rem;
-    color: #72788d;
-    display: block;
-    font-size: 1rem;
-    position: relative;
-  }
   .navbar {
     display: flex;
     padding: 1rem 9rem;
     line-height: 0;
     justify-content: space-between;
+
+    .logoContainer {
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      .logoLink {
+        #logo {
+          width: 50px;
+          height: 50px;
+          margin: 30px 0;
+          color: #72788d;
+          display: block;
+          font-size: 1rem;
+          position: relative;
+        }
+      }
+    }
     .overlay {
       position: initial;
       background: none;

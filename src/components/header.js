@@ -62,7 +62,11 @@ class Header extends Component {
         </div>
 
         <nav className="navbar">
-          <a id="logo">DL.</a>
+          <div className="logoContainer">
+            <Link className="logoLink" to="/" aria-label="Home">
+              <img src={require(`../images/logo.png`)} id="logo" />
+            </Link>
+          </div>
           <div className={`overlay ${navActive}`}>
             <ul>
               <li>

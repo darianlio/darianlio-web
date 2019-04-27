@@ -47,10 +47,25 @@
     }
     .aboutPicContainer {
       position: relative;
+      position: relative;
+      width: 40%;
+      max-width: 300px;
+      margin-left: 60px;
       mix-blend-mode: multiply;
       .aboutAvatarContainer {
         width: 100%;
         position: relative;
+        margin-left: -20px;
+        .aboutAvatar {
+          border-radius: 5px;
+          position: relative;
+          filter: grayscale(100%) contrast(1);
+          transition: 650ms ease;
+          &:hover {
+            transition: 650ms ease;
+            filter: grayscale(0%) contrast(1);
+          }
+        }
       }
     }
   }

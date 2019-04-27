@@ -36,7 +36,11 @@ class About extends Component {
           </div>
           <div className="aboutPicContainer">
             <div className="aboutAvatarContainer">
-              <Img fluid={avatar.childImageSharp.fluid} alt="Avatar" />
+              <Img
+                className="aboutAvatar"
+                fluid={avatar.childImageSharp.fluid}
+                alt="Avatar"
+              />
             </div>
           </div>
         </div>
