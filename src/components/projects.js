@@ -63,26 +63,32 @@ class Projects extends Component {
                     }}
                     tabIndex="0"
                   >
-                    <Img fluid={image.childImageSharp.fluid} alt="Avatar" />
                     <div className="project-inner">
+                      <Img
+                        className="project-image"
+                        fluid={image.childImageSharp.fluid}
+                        alt="ProjectImage"
+                      />
                       <div className="project-overlay">
-                        <div className="project-header">
-                          <div className="folder">
-                            <i className="far fa-folder-open" />
+                        <div>
+                          <div className="project-header">
+                            <div className="folder">
+                              <i className="far fa-folder-open" />
+                            </div>
                           </div>
+                          <h5 className="project-name">{title}</h5>
+                          <div
+                            className="project-description"
+                            dangerouslySetInnerHTML={{ __html: html }}
+                          />
                         </div>
-                        <h5 className="project-name">{title}</h5>
-                        <div
-                          className="project-description"
-                          dangerouslySetInnerHTML={{ __html: html }}
-                        />
-                      </div>
-                      <div>
-                        <ul className="tech-list">
-                          {tech.map((tech, i) => (
-                            <li key={i}>{tech}</li>
-                          ))}
-                        </ul>
+                        <div>
+                          <ul className="tech-list">
+                            {tech.map((tech, i) => (
+                              <li key={i}>{tech}</li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -9,10 +9,6 @@ class Contact extends Component {
     data: PropTypes.array.isRequired,
   }
 
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     sr.reveal(this.contact, srConfig())
   }
