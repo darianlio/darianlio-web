@@ -9,17 +9,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-      },
-    },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -43,6 +34,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/content/projects/images`,
+        name: "image",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `DarianLio`,
@@ -58,7 +63,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `baskerville\:400`,
           `muli\:300,700`,
           `roboto\:300,400,700`,
           `lato\:300,400,700`,
@@ -72,5 +76,7 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-offline`,
   ],
 }

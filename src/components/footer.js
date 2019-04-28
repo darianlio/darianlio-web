@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 import { socialMedia } from "@config"
 import "./footer.scss"

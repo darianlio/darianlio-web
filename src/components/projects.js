@@ -63,12 +63,11 @@ class Projects extends Component {
                     }}
                     tabIndex="0"
                   >
+                    <Img
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                      alt="Avatar"
+                    />
                     <div className="project-inner">
-                      <Img
-                        className="projectImage"
-                        fluid={image.childImageSharp.fluid}
-                        alt="Avatar"
-                      />
                       <div className="project-overlay">
                         <div className="project-header">
                           <div className="folder">

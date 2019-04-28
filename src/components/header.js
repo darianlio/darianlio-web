@@ -1,13 +1,5 @@
 import React, { Component } from "react"
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll"
+import { Link, Events, animateScroll as scroll } from "react-scroll"
 import "./header.scss"
 
 class Header extends Component {
