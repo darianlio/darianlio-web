@@ -1,7 +1,7 @@
 ---
 date: "2017-11-17"
 title: "Queen's Library System"
-image: "./threeSigma.png"
+image: "./library.jpg"
 tech:
   - Java
   - OOP
