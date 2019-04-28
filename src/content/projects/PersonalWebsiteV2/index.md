@@ -1,15 +1,14 @@
 ---
-date: '2018-07-24'
-title: 'Personal Website V2'
-image: ''
+date: "2018-07-24"
+title: "Personal Website V2"
 tech:
   - HTML
-  - CSS 
+  - CSS
   - Javascript
   - Node.js
   - Express
   - Digital Ocean
-show: 'true'
+show: "true"
 ---
 
 Designed and created a responsive personal website deployed on Digital Ocean.

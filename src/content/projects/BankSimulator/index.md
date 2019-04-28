@@ -1,11 +1,10 @@
 ---
-date: '2017-12-03'
-title: 'Bank Simulation'
-image: ''
+date: "2017-12-03"
+title: "Bank Simulation"
 tech:
   - Java
   - Batch
-show: 'true'
+show: "true"
 ---
 
 Developed a ATM banking simulation console for automated testing practices for both black box and white box testing.

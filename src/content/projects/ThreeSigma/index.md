@@ -1,7 +1,7 @@
 ---
 date: "2018-08-08"
 title: "Three Sigma (IBM Hackathon)"
-image: "../images/threeSigma.png"
+image: "./threeSigma.png"
 tech:
   - HTML
   - CSS

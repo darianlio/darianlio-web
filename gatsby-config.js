@@ -41,13 +41,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/content/projects/images`,
-        name: "image",
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `DarianLio`,

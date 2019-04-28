@@ -1,10 +1,9 @@
 ---
-date: '2017-10-21'
-title: 'Shakespearean Insult Generator'
-image: ''
+date: "2017-10-21"
+title: "Shakespearean Insult Generator"
 tech:
   - C++
-show: 'true'
+show: "true"
 ---
 
 Application utilizes a file of Shakespearean words, randomized to generate Shakespearean insults!

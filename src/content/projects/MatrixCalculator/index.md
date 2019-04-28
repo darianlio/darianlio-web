@@ -1,11 +1,10 @@
 ---
-date: '2017-03-16'
-title: 'Matrix Calculator'
-image: ''
+date: "2017-03-16"
+title: "Matrix Calculator"
 tech:
   - Java
   - OOP
-show: 'true'
+show: "true"
 ---
 
 Designed a matrix calculator capable of performing required operations depending on constructor for object-oriented programming practices.
