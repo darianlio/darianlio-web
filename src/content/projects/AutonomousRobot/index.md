@@ -1,7 +1,7 @@
 ---
 date: "2017-04-11"
 title: "Autonomous Robot"
-image: "./threeSigma.png"
+image: "./robot.png"
 tech:
   - Arduino
 show: "true"

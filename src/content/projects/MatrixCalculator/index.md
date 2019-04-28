@@ -1,7 +1,7 @@
 ---
 date: "2017-03-16"
 title: "Matrix Calculator"
-image: "./threeSigma.png"
+image: "./calc.png"
 tech:
   - Java
   - OOP

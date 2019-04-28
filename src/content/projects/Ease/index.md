@@ -1,7 +1,7 @@
 ---
 date: "2017-02-06"
 title: "Ease"
-image: "./threeSigma.png"
+image: "./ease.png"
 tech:
   - Java
   - XML
