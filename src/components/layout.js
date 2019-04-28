@@ -20,6 +20,8 @@ const ParticlesStyle = {
   width: "100%",
   height: "100%",
   zIndex: "-1",
+  opacity: "0",
+  animation: "0.5s fade 0.3s forwards",
 }
 
 class Layout extends Component {

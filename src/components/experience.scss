@@ -2,7 +2,7 @@
   position: relative;
   margin: 0 auto;
   padding: 150px 0;
-  max-width: 700px;
+  max-width: 1000px;
   .experience-title {
     position: relative;
     display: flex;
@@ -48,27 +48,28 @@
     position: relative;
     padding-left: 30px;
     flex-grow: 1;
-  }
-  .job-title {
-    font-size: 20px;
-    width: 100%;
-    .company {
+    .job-title {
+      font-size: 20px;
+      width: 100%;
+      .company {
+      }
     }
-  }
-  .job-range {
-    font-size: 16px;
-    font-weight: normal;
-    letter-spacing: 0.5px;
-    color: #444;
-    margin-bottom: 30px;
-    svg {
-      width: 15px;
+    .job-range {
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+      color: #444;
+      margin-bottom: 30px;
+      svg {
+        width: 15px;
+      }
     }
-  }
 
-  .job-description {
-    font-family: "roboto", "sans-serif";
-    letter-spacing: 1px;
-    font-weight: 300;
+    .job-description {
+      font-family: "roboto", "sans-serif";
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
   }
 }

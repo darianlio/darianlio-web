@@ -23,6 +23,15 @@ class About extends Component {
       <div className="aboutContainer" id="about" ref={el => (this.about = el)}>
         <div className="aboutHeading">{title}</div>
         <div className="aboutFlexContainer">
+          <div className="aboutPicContainer">
+            <div className="aboutAvatarContainer">
+              <Img
+                className="aboutAvatar"
+                fluid={avatar.childImageSharp.fluid}
+                alt="Avatar"
+              />
+            </div>
+          </div>
           <div className="aboutContentContainer">
             <div dangerouslySetInnerHTML={{ __html: html }} />
             <ul className="skillsContainer">
@@ -33,15 +42,6 @@ class About extends Component {
                   </li>
                 ))}
             </ul>
-          </div>
-          <div className="aboutPicContainer">
-            <div className="aboutAvatarContainer">
-              <Img
-                className="aboutAvatar"
-                fluid={avatar.childImageSharp.fluid}
-                alt="Avatar"
-              />
-            </div>
           </div>
         </div>
       </div>

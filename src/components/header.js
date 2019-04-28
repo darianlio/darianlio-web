@@ -40,7 +40,7 @@ class Header extends Component {
     const navActive = this.state.menu ? "menu-open" : ""
 
     return (
-      <div className="header">
+      <div className="header" id="header">
         <div className="menu">
           <button
             className={`hamburger hamburger--slider ${menuActive}`}

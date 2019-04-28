@@ -9,7 +9,7 @@ a {
   text-align: center;
   position: absolute;
   opacity: 0;
-  animation: 0.5s fade 0.5s forwards;
+  animation: 0.5s fade 0.4s forwards;
   z-index: 999;
 }
 
@@ -151,11 +151,7 @@ button:focus {
         z-index: 999;
         position: fixed;
         transition: 650ms ease;
-
-        &:hover {
-          filter: sepia(80%) contrast(80%) saturate(50) hue-rotate(145deg);
-          transition: 650ms ease;
-        }
+        filter: brightness(30%);
       }
     }
   }
@@ -170,14 +166,34 @@ button:focus {
 
       li {
         a {
+          text-decoration: none;
+          position: relative;
           margin-top: 50px;
           display: block;
           font-size: 1rem;
           letter-spacing: 1px;
           transition: all 650ms ease;
+
           &:hover {
             color: #a1dabd;
             transition: all 650ms ease;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            display: block;
+            margin-top: 10px;
+            right: 0;
+            background: #a1dabd;
+            transition: width 650ms ease;
+            -webkit-transition: width 650ms ease;
+          }
+          &:hover:after {
+            width: 100%;
+            left: 0;
+            background: #a1dabd;
           }
         }
       }
@@ -245,10 +261,10 @@ button:focus {
         margin-top: 2px;
 
         li {
+          padding: 0 1.5rem;
           a {
             color: #72788d;
             font-size: 1rem;
-            padding: 0 1.5rem;
           }
         }
       }

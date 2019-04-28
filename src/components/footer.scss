@@ -10,7 +10,6 @@ footer {
   a {
     color: #72788d;
     margin-top: 10px;
-    font-size: 20px;
     transition: 650ms ease;
 
     &:hover {
@@ -22,12 +21,17 @@ footer {
   .footFlexContainer {
     padding: 0 100px;
     display: flex;
+    letter-spacing: 1px;
     justify-content: space-between;
     align-items: center;
 
     .contactContainer {
       font-family: "muli", "sans-serif";
       font-size: 15px;
+
+      .contactTitle {
+        text-align: left;
+      }
 
       h1 {
         font-size: 15px;
@@ -37,13 +41,30 @@ footer {
         font-size: 15px;
       }
 
+      .fa-envelope {
+        margin-right: 30px;
+        color: #72788d;
+      }
+      .fa-map-marker-alt {
+        margin-right: 34px;
+        color: #72788d;
+      }
+
       .locationContainer {
         padding-top: 20px;
       }
 
       .emailContainer,
       .locationContainer {
+        padding: 10px 0;
         text-align: left;
+        a {
+          color: #72788d;
+
+          &:hover {
+            color: #fff;
+          }
+        }
       }
     }
 
@@ -55,6 +76,7 @@ footer {
       text-align: center;
 
       .footerTitle {
+        letter-spacing: 0px;
         font-size: 18px;
       }
 
@@ -75,9 +97,35 @@ footer {
     }
 
     .footNavContainer {
+      font-family: "muli", "sans-serif";
+      font-size: 15px;
       text-align: right;
+
+      .topLink {
+        #top {
+          filter: grayscale(100%) contrast(30%) sepia(100%) hue-rotate(100deg)
+            brightness(100%) invert(0);
+          transition: 650ms ease;
+          width: 25px;
+          padding-bottom: 20px;
+
+          &:hover {
+            filter: grayscale(100%) contrast(0%) sepia(0%) hue-rotate(0)
+              brightness(0) invert(1);
+            transition: 650ms ease;
+          }
+        }
+      }
+
       a {
-        font-size: 16px;
+        font-family: "muli", "sans-serif";
+        color: #72788d;
+        font-size: 15px;
+        font-weight: 300;
+
+        &:hover {
+          color: #fff;
+        }
       }
     }
 
@@ -89,8 +137,8 @@ footer {
   }
 
   .copyright {
-    padding: 50px 0 25px 0;
-    font-family: "Lato", "sans-serif";
+    padding: 25px 0 25px 0;
+    font-family: "muli", "sans-serif";
     font-size: 14px;
     color: #fff;
     background-color: #272932;

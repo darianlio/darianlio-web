@@ -13,7 +13,8 @@ class Hero extends Component {
     const { frontmatter, html } = data[0].node
 
     return (
-      <div className="heroBg">
+      <div>
+        <div className="heroBg" />
         <div className="heroContainer">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.name}</h2>

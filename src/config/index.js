@@ -22,6 +22,10 @@ module.exports = {
       name: "Instagram",
       url: "https://www.instagram.com/notdurian/",
     },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/liodarian",
+    },
   ],
 
   googleAnalyticsID: "UA-138972191-1",

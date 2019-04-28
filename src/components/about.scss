@@ -6,8 +6,7 @@
 
   .aboutHeading {
     position: relative;
-    display: flex;
-    align-items: center;
+    text-align: center;
     margin: 10px 0 40px;
     width: 100%;
     white-space: nowrap;
@@ -24,7 +23,7 @@
     .aboutContentContainer {
       font-family: "roboto", "sans-serif";
       width: 60%;
-      max-width: 550px;
+      max-width: 575px;
       font-size: 16px;
       font-weight: 300;
       letter-spacing: 1px;
@@ -56,7 +55,6 @@
       position: relative;
       width: 40%;
       max-width: 300px;
-      margin-left: 60px;
       mix-blend-mode: multiply;
       .aboutAvatarContainer {
         width: 100%;

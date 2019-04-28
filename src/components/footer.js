@@ -8,19 +8,20 @@ const Footer = () => (
   <footer>
     <div className="footFlexContainer">
       <div className="contactContainer">
+        <div className="contactTitle">
+          <h1>Contact Me</h1>
+        </div>
         <div className="emailContainer">
-          <h1>Email</h1>
           <i className="far fa-envelope" />
           <a
             href="mailto:darianlio97@gmail.com"
             rel="nofollow noopener noreferrer"
             aria-label="email"
           >
-            &nbsp;&nbsp;darianlio97@gmail.com
+            darianlio97@gmail.com
           </a>
         </div>
         <div className="locationContainer">
-          <h1>Location</h1>
           <i className="fas fa-map-marker-alt" />
           <a
             href="https://www.google.com/maps/place/Toronto,+ON/@43.6565353,-79.6010302,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843"
@@ -28,7 +29,7 @@ const Footer = () => (
             rel="nofollow noopener noreferrer"
             aria-label="location"
           >
-            &nbsp;&nbsp;Toronto, Canada
+            Toronto, Canada
           </a>
         </div>
       </div>
@@ -48,8 +49,10 @@ const Footer = () => (
                   <i className="fab fa-github" />
                 ) : name === "Linkedin" ? (
                   <i className="fab fa-linkedin-in" />
-                ) : (
+                ) : name == "Instagram" ? (
                   <i className="fab fa-instagram" />
+                ) : (
+                  <i class="fab fa-facebook" />
                 )}
               </a>
             </li>
@@ -57,6 +60,20 @@ const Footer = () => (
         </div>
       </div>
       <div className="footNavContainer">
+        <div className="logoContainer">
+          <Link
+            className="topLink"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            to="header"
+            aria-label="Home"
+          >
+            <img src={require(`../images/arrow.png`)} id="top" />
+          </Link>
+        </div>
         <ul>
           <li>
             <Link
