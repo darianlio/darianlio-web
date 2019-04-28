@@ -1,6 +1,6 @@
 ---
 date: "2018-04-06"
-title: "Online Movie Ticketing System"
+title: "Online Movie Ticket Service"
 image: "./omts.png"
 tech:
   - HTML

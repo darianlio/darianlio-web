@@ -4,6 +4,10 @@
   padding: 150px 0;
   max-width: 1000px;
 
+  .hline {
+    border-bottom: 2px solid rgb(161, 179, 199);
+  }
+
   .education-title {
     position: relative;
     display: flex;
@@ -22,6 +26,7 @@
     align-items: center;
     justify-content: space-between;
     .range {
+      font-weight: 300;
       font-size: 16px;
     }
   }

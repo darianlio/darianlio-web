@@ -1,7 +1,7 @@
 ---
 date: "2017-12-03"
 title: "Bank Simulation"
-image: "./bank.png"
+image: "./bank.jpg"
 tech:
   - Java
   - Batch

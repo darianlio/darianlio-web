@@ -30,13 +30,13 @@ const TabContent = styled.div`
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: 16px;
+    font-size: 15px;
     li {
       position: relative;
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: "▹";
+        content: "○";
         position: absolute;
         left: 0;
         color: #777;
@@ -130,10 +130,13 @@ class Experience extends Component {
                         </a>
                       </span>
                     </div>
-                    <div className="job-details">
+                    <div className="job-range">
                       <span>{range}</span>
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <div
+                      className="job-description"
+                      dangerouslySetInnerHTML={{ __html: html }}
+                    />
                   </TabContent>
                 )
               })}

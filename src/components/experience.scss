@@ -55,8 +55,8 @@
     .company {
     }
   }
-  .job-details {
-    font-size: 15px;
+  .job-range {
+    font-size: 16px;
     font-weight: normal;
     letter-spacing: 0.5px;
     color: #444;
@@ -64,5 +64,11 @@
     svg {
       width: 15px;
     }
+  }
+
+  .job-description {
+    font-family: "roboto", "sans-serif";
+    letter-spacing: 1px;
+    font-weight: 300;
   }
 }

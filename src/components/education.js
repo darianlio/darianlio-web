@@ -22,6 +22,7 @@ class Education extends Component {
         ref={el => (this.education = el)}
       >
         <div className="education-title">Education</div>
+        <div className="hline" />
         {data &&
           data.map(({ node }, i) => {
             const { frontmatter } = node

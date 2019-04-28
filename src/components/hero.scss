@@ -5,9 +5,11 @@
     background-size: cover;
     background-position: calc(100%) calc(100% + 500px);
     background-attachment: fixed;
+    position: relative;
     height: 100vh;
     opacity: 0;
     animation: 0.5s fade 0.5s forwards;
+    z-index: -99;
 
     .heroContainer {
       display: flex;

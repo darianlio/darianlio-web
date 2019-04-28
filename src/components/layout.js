@@ -8,10 +8,19 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import Particles from "react-particles-js"
+import { particleConfig } from "../config/index"
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
+
+const ParticlesStyle = {
+  position: "fixed",
+  width: "100%",
+  height: "100%",
+  zIndex: "-1",
+}
 
 class Layout extends Component {
   static propTypes = {
@@ -35,6 +44,7 @@ class Layout extends Component {
         render={({ site }) => (
           <div id="root">
             <Head metadata={site.siteMetadata} />
+            <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
             <div className="container">
               {children}
