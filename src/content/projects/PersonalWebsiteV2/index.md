@@ -1,6 +1,7 @@
 ---
 date: "2018-07-24"
 title: "Personal Website V2"
+image: "./threeSigma.png"
 tech:
   - HTML
   - CSS

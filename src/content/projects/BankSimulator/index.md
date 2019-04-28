@@ -1,6 +1,7 @@
 ---
 date: "2017-12-03"
 title: "Bank Simulation"
+image: "./threeSigma.png"
 tech:
   - Java
   - Batch
