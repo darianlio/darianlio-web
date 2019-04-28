@@ -1,7 +1,7 @@
 ---
 date: "2017-10-21"
 title: "Shakespearean Insult Generator"
-image: "./threeSigma.png"
+image: "./shakespeare.png"
 tech:
   - C++
 show: "true"
