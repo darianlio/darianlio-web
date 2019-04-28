@@ -1,7 +1,7 @@
 ---
 date: "2018-04-06"
 title: "Online Movie Ticketing System"
-image: "./threeSigma.png"
+image: "./omts.png"
 tech:
   - HTML
   - CSS
