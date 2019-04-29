@@ -10,6 +10,7 @@ const config = require("../config")
 const Head = ({ metadata }) => (
   <Helmet>
     <html lang="en" prefix="og: http://ogp.me/ns#" />
+    <meta charset="utf-8" />
     <title itemProp="name" lang="en">
       {metadata.title}
     </title>
@@ -17,6 +18,8 @@ const Head = ({ metadata }) => (
     <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32} />
     <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
     <link rel="shortcut icon" href={favicon} />
+    <meta name="google-site-verification" content="verification_token" />
+    <meta name="msvalidate.01" content="verification_token" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={metadata.description} />
     <meta name="keywords" content={config.siteKeywords} />

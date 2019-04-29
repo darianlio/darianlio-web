@@ -16,27 +16,29 @@ class Education extends Component {
   render() {
     const { data } = this.props
     return (
-      <div
-        className="education-container"
-        id="education"
-        ref={el => (this.education = el)}
-      >
-        <div className="education-title">Education</div>
-        <div className="hline" />
-        {data &&
-          data.map(({ node }, i) => {
-            const { frontmatter } = node
-            const { title, company, range } = frontmatter
-            return (
-              <div key={i} className="container">
-                <div className="school-title">
-                  <span>{title}</span>
-                  <span className="range">{range}</span>
+      <div className="education-bg">
+        <div
+          className="education-container"
+          id="education"
+          ref={el => (this.education = el)}
+        >
+          <div className="education-title">Education</div>
+          <div className="hline" />
+          {data &&
+            data.map(({ node }, i) => {
+              const { frontmatter } = node
+              const { title, company, range } = frontmatter
+              return (
+                <div key={i} className="container">
+                  <div className="school-title">
+                    <span>{title}</span>
+                    <span className="range">{range}</span>
+                  </div>
+                  <div className="school">{company}</div>
                 </div>
-                <div className="school">{company}</div>
-              </div>
-            )
-          })}
+              )
+            })}
+        </div>
       </div>
     )
   }

@@ -25,6 +25,7 @@ const TabContent = styled.div`
   left: 0;
   width: 100%;
   height: auto;
+  outline: none;
 
   ul {
     padding: 0;

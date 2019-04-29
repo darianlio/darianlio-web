@@ -39,7 +39,7 @@
         font-size: 14px;
         &:hover,
         &:focus {
-          background-color: rgb(214, 214, 214);
+          background-color: rgb(240, 240, 240);
         }
       }
     }
@@ -51,18 +51,12 @@
     .job-title {
       font-size: 20px;
       width: 100%;
-      .company {
-      }
     }
     .job-range {
       font-size: 16px;
       font-weight: normal;
       letter-spacing: 0.5px;
-      color: #444;
       margin-bottom: 30px;
-      svg {
-        width: 15px;
-      }
     }
 
     .job-description {

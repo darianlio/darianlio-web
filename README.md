@@ -16,12 +16,14 @@ My personal website utilizing Gatsby and React!
 - gatsby-source-filesystem
 - gatsby-plugin-sharp
 - gatsby-transformer-sharp
+- gatsby-transformer-remark
 - gatsby-plugin-google-analytics
 - gatsby-plugin-google-fonts
 - gatsby-plugin-sass
 - prop-types
 - node-sass
 - react
+- react-scroll
 - react-dom
 - react-helmet
 
