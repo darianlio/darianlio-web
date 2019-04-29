@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import resume from "../images/resume.pdf"
+import email from "../config/index"
 import "./hero.scss"
 
 class Hero extends Component {
@@ -23,14 +24,25 @@ class Hero extends Component {
             className="heroDetails"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <a
-            href={resume}
-            target="__blank"
-            rel="nofollow noopener noreferrer"
-            className="main-btn"
-          >
-            View Resume
-          </a>
+          <span>
+            <a
+              href={`mailto:${email}`}
+              target="__blank"
+              rel="nofollow noopener noreferrer"
+              className="main-btn"
+              id="email-btn"
+            >
+              Get I n Touch
+            </a>
+            <a
+              href={resume}
+              target="__blank"
+              rel="nofollow noopener noreferrer"
+              className="main-btn"
+            >
+              View Resume
+            </a>
+          </span>
         </div>
       </div>
     )

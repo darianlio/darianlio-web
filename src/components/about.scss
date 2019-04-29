@@ -27,6 +27,15 @@
       font-size: 16px;
       font-weight: 300;
       letter-spacing: 1px;
+      p {
+        line-height: 2rem;
+      }
+      .textSpan {
+        border: 2px solid #000;
+        border-radius: 30px;
+        padding: 5px 10px;
+        color: #000;
+      }
       .skillsContainer {
         display: grid;
         grid-template-columns: repeat(4, minmax(100px, 125px));

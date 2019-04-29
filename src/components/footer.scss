@@ -6,17 +6,7 @@ footer {
   height: auto;
   margin-top: 150px;
   min-height: 200px;
-
-  a {
-    color: #72788d;
-    margin-top: 10px;
-    transition: 650ms ease;
-
-    &:hover {
-      transition: 650ms ease;
-      color: #fff;
-    }
-  }
+  position: relative;
 
   .footFlexContainer {
     padding: 0 100px;
@@ -24,6 +14,17 @@ footer {
     letter-spacing: 1px;
     justify-content: space-between;
     align-items: center;
+
+    a {
+      color: #72788d;
+      margin-top: 10px;
+      transition: 650ms ease;
+
+      &:hover {
+        transition: 650ms ease;
+        color: #fff;
+      }
+    }
 
     .contactContainer {
       font-family: "muli", "sans-serif";
@@ -100,23 +101,6 @@ footer {
       font-family: "muli", "sans-serif";
       font-size: 15px;
       text-align: right;
-
-      .topLink {
-        #top {
-          filter: grayscale(100%) contrast(30%) sepia(100%) hue-rotate(100deg)
-            brightness(100%) invert(0);
-          transition: 650ms ease;
-          width: 25px;
-          padding-bottom: 20px;
-
-          &:hover {
-            filter: grayscale(100%) contrast(0%) sepia(0%) hue-rotate(0)
-              brightness(0) invert(1);
-            transition: 650ms ease;
-          }
-        }
-      }
-
       a {
         font-family: "muli", "sans-serif";
         color: #72788d;
@@ -140,10 +124,29 @@ footer {
     padding: 25px 0 25px 0;
     font-family: "muli", "sans-serif";
     font-size: 14px;
-    color: #fff;
+    color: rgb(163, 173, 190);
     background-color: #272932;
     width: 100%;
     text-align: center;
     margin: 0 auto;
+
+    .logoContainer {
+      padding-top: 50px;
+      .topLink {
+        #top {
+          filter: grayscale(100%) contrast(30%) sepia(0%) hue-rotate(0)
+            brightness(100%) invert(0);
+          transition: 650ms ease;
+          width: 25px;
+          padding-bottom: 5px;
+
+          &:hover {
+            filter: grayscale(100%) contrast(0%) sepia(0%) hue-rotate(0)
+              brightness(0) invert(1);
+            transition: 650ms ease;
+          }
+        }
+      }
+    }
   }
 }

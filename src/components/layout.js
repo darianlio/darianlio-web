@@ -13,6 +13,7 @@ import { particleConfig } from "../config/index"
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
+import toTop from "./toTop"
 import "../styles/index.scss"
 
 const ParticlesStyle = {
@@ -51,6 +52,7 @@ class Layout extends Component {
             <div className="container">
               {children}
               <Footer />
+              <toTop />
             </div>
           </div>
         )}
