@@ -7,7 +7,30 @@ footer {
   margin-top: 150px;
   min-height: 200px;
   position: relative;
-
+  &:before,
+  &:after {
+    pointer-events: none;
+  }
+  &:before,
+  &:after,
+  & > .arrow {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -20px;
+    border: 20px solid transparent;
+    border-bottom-color: #272932;
+  }
+  &:after {
+    margin-left: -8px;
+    border-width: 8px;
+  }
+  & > .arrow {
+    margin-left: -11px;
+    border-width: 11px;
+    border-bottom-color: #fff;
+  }
   .footFlexContainer {
     padding: 0 100px;
     display: flex;

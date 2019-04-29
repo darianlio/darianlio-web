@@ -36,7 +36,7 @@ body {
 }
 
 ::selection {
-  background-color: rgb(30, 39, 70);
+  background-color: rgb(132, 144, 192);
 }
 h1,
 h2,
@@ -105,6 +105,26 @@ ol {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+#fixedButton {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  transition: 650ms ease;
+
+  .fa-chevron-up {
+    color: white;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 650ms ease;
+  }
+  opacity: 0;
+  animation: 0.5s fade 1.5s forwards;
 }
 
 .mainContainer {

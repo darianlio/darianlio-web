@@ -6,6 +6,15 @@ import "./footer.scss"
 
 const Footer = () => (
   <footer>
+    <Link
+      activeClass="active"
+      to="header"
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
+      className="arrow"
+    />
     <div className="footFlexContainer">
       <div className="contactContainer">
         <div className="contactTitle">

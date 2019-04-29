@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import { Link, Events, animateScroll as scroll } from "react-scroll"
+import { Link } from "react-scroll"
+import { throttle } from "../utils/throttle"
 import "./header.scss"
 
 class Header extends Component {
@@ -12,27 +13,8 @@ class Header extends Component {
     this.scrollToTop = this.scrollToTop.bind(this)
   }
 
-  componentDidMount() {
-    Events.scrollEvent.register("begin", function() {
-      console.log("begin", arguments)
-    })
-
-    Events.scrollEvent.register("end", function() {
-      console.log("end", arguments)
-    })
-  }
-
-  scrollToTop() {
-    scroll.scrollToTop()
-  }
-
   toggleMenu() {
     this.setState({ menu: !this.state.menu })
-  }
-
-  componentWillUnmount() {
-    Events.scrollEvent.remove("begin")
-    Events.scrollEvent.remove("end")
   }
 
   render() {
@@ -69,6 +51,7 @@ class Header extends Component {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={this.toggleMenu}
                 >
                   About
                 </Link>
@@ -81,6 +64,7 @@ class Header extends Component {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={this.toggleMenu}
                 >
                   Experience
                 </Link>
@@ -93,6 +77,7 @@ class Header extends Component {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={this.toggleMenu}
                 >
                   Education
                 </Link>
@@ -105,6 +90,7 @@ class Header extends Component {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={this.toggleMenu}
                 >
                   Projects
                 </Link>
@@ -117,6 +103,7 @@ class Header extends Component {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  onClick={this.toggleMenu}
                 >
                   Contact
                 </Link>

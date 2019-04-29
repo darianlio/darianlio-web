@@ -9,11 +9,11 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Particles from "react-particles-js"
+import { Link } from "react-scroll"
 import { particleConfig } from "../config/index"
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
-import toTop from "./toTop"
 import "../styles/index.scss"
 
 const ParticlesStyle = {
@@ -49,10 +49,21 @@ class Layout extends Component {
             <Head metadata={site.siteMetadata} />
             <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
+            <div id="fixedButton">
+              <Link
+                activeClass="active"
+                to="header"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <i class="fas fa-chevron-up" />
+              </Link>
+            </div>
             <div className="container">
               {children}
               <Footer />
-              <toTop />
             </div>
           </div>
         )}
