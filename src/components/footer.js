@@ -5,7 +5,7 @@ import { socialMedia } from "@config"
 import "./footer.scss"
 
 const Footer = () => (
-  <footer>
+  <footer id="footer">
     <Link
       activeClass="active"
       to="header"
@@ -61,7 +61,7 @@ const Footer = () => (
                 ) : name == "Instagram" ? (
                   <i className="fab fa-instagram" />
                 ) : (
-                  <i class="fab fa-facebook" />
+                  <i className="fab fa-facebook" />
                 )}
               </a>
             </li>

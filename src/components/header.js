@@ -10,7 +10,6 @@ class Header extends Component {
       menu: false,
     }
     this.toggleMenu = this.toggleMenu.bind(this)
-    this.scrollToTop = this.scrollToTop.bind(this)
   }
 
   toggleMenu() {

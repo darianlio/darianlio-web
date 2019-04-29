@@ -49,7 +49,7 @@ class Layout extends Component {
             <Head metadata={site.siteMetadata} />
             <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
-            <div id="fixedButton">
+            <div id="fixedButtonTop">
               <Link
                 activeClass="active"
                 to="header"
@@ -58,7 +58,19 @@ class Layout extends Component {
                 offset={-70}
                 duration={500}
               >
-                <i class="fas fa-chevron-up" />
+                <i className="fas fa-chevron-up" />
+              </Link>
+            </div>
+            <div id="fixedButtonBottom">
+              <Link
+                activeClass="active"
+                to="footer"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <i className="fas fa-chevron-down" />
               </Link>
             </div>
             <div className="container">

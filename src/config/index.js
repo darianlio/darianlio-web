@@ -30,11 +30,11 @@ module.exports = {
 
   googleAnalyticsID: "UA-138972191-1",
 
-  srConfig: (delay = 200) => ({
+  srConfig: () => ({
     origin: "bottom",
     distance: "20px",
     duration: 500,
-    delay,
+    delay: 100,
     rotate: { x: 0, y: 0, z: 0 },
     opacity: 0,
     scale: 1,
