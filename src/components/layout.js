@@ -49,34 +49,34 @@ class Layout extends Component {
             <Head metadata={site.siteMetadata} />
             <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
-            <div id="fixedButtonTop">
-              <Link
-                activeClass="active"
-                to="header"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <i className="fas fa-chevron-up" />
-              </Link>
+            <div className="sticky-button">
+              <div id="fixed-button-top">
+                <Link
+                  activeClass="active"
+                  to="header"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <i className="fas fa-chevron-up" />
+                </Link>
+              </div>
+              <div id="fixed-button-bottom">
+                <Link
+                  activeClass="active"
+                  to="footer"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  <i className="fas fa-chevron-down" />
+                </Link>
+              </div>
             </div>
-            <div id="fixedButtonBottom">
-              <Link
-                activeClass="active"
-                to="footer"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <i className="fas fa-chevron-down" />
-              </Link>
-            </div>
-            <div className="container">
-              {children}
-              <Footer />
-            </div>
+            {children}
+            <Footer />
           </div>
         )}
       />

@@ -38,6 +38,7 @@ body {
 ::selection {
   background-color: rgb(132, 144, 192);
 }
+
 h1,
 h2,
 h3,
@@ -45,13 +46,6 @@ h4,
 h5 {
   color: #72788d;
   margin: 0 0 10px 0;
-}
-
-#root {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-columns: 100%;
 }
 
 img {
@@ -107,44 +101,53 @@ ol {
   list-style: none;
 }
 
-#fixedButtonTop {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 5px 10px;
-  border-radius: 10px;
-  position: fixed;
-  bottom: 5rem;
-  right: 2rem;
-  transition: 650ms ease;
-
-  .fa-chevron-up {
-    color: white;
-  }
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: 650ms ease;
-  }
-  opacity: 0;
-  animation: 0.5s fade 1.5s forwards;
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
 }
 
-#fixedButtonBottom {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 5px 10px;
-  border-radius: 10px;
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  transition: 650ms ease;
-
-  .fa-chevron-down {
-    color: white;
-  }
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.sticky-button {
+  #fixed-button-top {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
     transition: 650ms ease;
+
+    .fa-chevron-up {
+      color: white;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: 650ms ease;
+    }
+    opacity: 0;
+    animation: 0.5s fade 1.5s forwards;
   }
-  opacity: 0;
-  animation: 0.5s fade 1.5s forwards;
+
+  #fixed-button-bottom {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    transition: 650ms ease;
+
+    .fa-chevron-down {
+      color: white;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: 650ms ease;
+    }
+    opacity: 0;
+    animation: 0.5s fade 1.5s forwards;
+  }
 }
 
 .main-container {

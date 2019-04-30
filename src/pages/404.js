@@ -1,12 +1,16 @@
 import React from "react"
-import Layout from "../components/layout"
+import { Link } from "gatsby"
+import "@styles/error.scss"
 
 const NotFoundPage = () => (
-  <Layout>
-    <div title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <div className="error-container">
+    <h1>404</h1>
+    <h2>Not Found</h2>
+    <p>Oops! Looks like you have entered an invalid page..</p>
+    <Link className="back" to="/">
+      Return to Home
+    </Link>
+  </div>
 )
 
 export default NotFoundPage
