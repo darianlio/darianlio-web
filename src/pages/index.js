@@ -13,8 +13,10 @@ import "@styles/index.scss"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <div className="main-container" id="content">
+    <div className="hero-main-container" id="content">
       <Hero data={data.hero.edges} />
+    </div>
+    <div className="main-container">
       <About data={data.about.edges} />
       <Experience data={data.experience.edges} />
       <Education data={data.education.edges} />

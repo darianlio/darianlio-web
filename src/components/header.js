@@ -36,7 +36,11 @@ class Header extends Component {
         <nav className="nav-bar">
           <div className="logo-container">
             <Link className="logo-link" to="/" aria-label="Home">
-              <img src={require(`../images/logo.png`)} id="logo" />
+              <img
+                src={require(`../images/logo.png`)}
+                id="logo"
+                alt="dar-logo"
+              />
             </Link>
           </div>
           <div className={`overlay ${navActive}`}>

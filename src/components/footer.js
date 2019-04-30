@@ -57,7 +57,7 @@ const Footer = () => (
                   <i className="fab fa-github" />
                 ) : name === "Linkedin" ? (
                   <i className="fab fa-linkedin-in" />
-                ) : name == "Instagram" ? (
+                ) : name === "Instagram" ? (
                   <i className="fab fa-instagram" />
                 ) : (
                   <i className="fab fa-facebook" />

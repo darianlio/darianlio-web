@@ -11,9 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Particles from "react-particles-js"
 import { Link } from "react-scroll"
 import { particleConfig } from "@config"
-import Head from "./head"
-import Header from "./header"
-import Footer from "./footer"
+import { Head, Header, Footer } from "@components"
 import "@styles/index.scss"
 
 const ParticlesStyle = {
@@ -46,7 +44,7 @@ class Layout extends Component {
         `}
         render={({ site }) => (
           <div id="root">
-            <Head metadata={site.siteMetadata} />
+            <Head />
             <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
             <div className="sticky-button">
