@@ -53,11 +53,11 @@ class Layout extends Component {
     // We only change the state if it needs to be changed
     const currentScrollPos = window.scrollY
     if (
-      !this.state.hidden &&
-      window.innerHeight + currentScrollPos > document.body.clientHeight - 100
+      window.innerHeight + currentScrollPos >
+      document.body.clientHeight - 100
     ) {
       this.setState({ hidden: true })
-    } else if (this.state.hidden) {
+    } else {
       this.setState({ hidden: false })
     }
   }
