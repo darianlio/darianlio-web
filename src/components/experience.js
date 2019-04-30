@@ -82,11 +82,8 @@ class Experience extends Component {
         <Parallax speed={0}>
           <div className="rocket1" />
         </Parallax>
-        <Parallax speed={-2}>
-          <div className="rocket2" />
-        </Parallax>
         <Parallax speed={-1}>
-          <div className="rocket3" />
+          <div className="rocket2" />
         </Parallax>
         <div
           className="experience-container"

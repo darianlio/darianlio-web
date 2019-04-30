@@ -12,6 +12,7 @@ class Contact extends Component {
 
   componentDidMount() {
     sr.reveal(this.contact, srConfig())
+    sr.reveal(this.contactParallax, srConfig())
   }
 
   render() {
@@ -21,18 +22,20 @@ class Contact extends Component {
 
     return (
       <div>
-        <Parallax speed={1} zIndex={-99999}>
-          <div className="contact-mail" />
-        </Parallax>
-        <Parallax speed={2} zIndex={-99999}>
-          <div className="contact-fb" />
-        </Parallax>
-        <Parallax speed={1} zIndex={-99999}>
-          <div className="contact-gh" />
-        </Parallax>
-        <Parallax speed={2} zIndex={-99999}>
-          <div className="contact-insta" />
-        </Parallax>
+        <div id="contact-parallax" ref={el => (this.contactParallax = el)}>
+          <Parallax speed={1} zIndex={-99999}>
+            <div className="contact-mail" />
+          </Parallax>
+          <Parallax speed={2} zIndex={-99999}>
+            <div className="contact-fb" />
+          </Parallax>
+          <Parallax speed={1} zIndex={-99999}>
+            <div className="contact-gh" />
+          </Parallax>
+          <Parallax speed={2} zIndex={-99999}>
+            <div className="contact-insta" />
+          </Parallax>
+        </div>
         <div
           className="contact-container"
           id="contact"

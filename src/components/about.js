@@ -13,6 +13,7 @@ class About extends Component {
 
   componentDidMount() {
     sr.reveal(this.about, srConfig())
+    sr.reveal(this.aboutParallax, srConfig())
   }
 
   render() {
@@ -22,21 +23,23 @@ class About extends Component {
 
     return (
       <div>
-        <Parallax speed={2}>
-          <div className="switch" />
-        </Parallax>
-        <Parallax speed={-1}>
-          <div className="cube1" />
-        </Parallax>
-        <Parallax speed={-1}>
-          <div className="cube2" />
-        </Parallax>
-        <Parallax speed={-3}>
-          <div className="cube3" />
-        </Parallax>
-        <Parallax speed={-2}>
-          <div className="cube4" />
-        </Parallax>
+        <div id="about-parallax" ref={el => (this.aboutParallax = el)}>
+          <Parallax speed={2}>
+            <div className="switch" />
+          </Parallax>
+          <Parallax speed={-1}>
+            <div className="cube1" />
+          </Parallax>
+          <Parallax speed={-1}>
+            <div className="cube2" />
+          </Parallax>
+          <Parallax speed={-3}>
+            <div className="cube3" />
+          </Parallax>
+          <Parallax speed={-2}>
+            <div className="cube4" />
+          </Parallax>
+        </div>
         <div
           className="about-container"
           id="about"
