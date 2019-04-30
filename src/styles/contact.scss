@@ -92,3 +92,18 @@
     }
   }
 }
+
+//phone 376
+@media only screen and (min-width: 20.625em) and (max-width: 30em) {
+  .main-container {
+    .contact-container {
+      .contact-heading {
+        font-size: 40px;
+      }
+
+      .contact-details {
+        font-size: 18px;
+      }
+    }
+  }
+}

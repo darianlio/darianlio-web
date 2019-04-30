@@ -49,6 +49,7 @@
       align-items: center;
       justify-content: space-between;
       .school-range {
+        display: flex;
         font-weight: 300;
         font-size: 16px;
       }
@@ -58,5 +59,70 @@
       font-size: 15px;
       padding-top: 10px;
     }
+  }
+}
+
+//phone 376
+@media only screen and (min-width: 20.625em) and (max-width: 30em) {
+  .education-main-container {
+    padding: 0 25px !important;
+    .education-container {
+      .education-heading {
+        font-size: 24px;
+      }
+      .school-container {
+        .school-heading {
+          display: block;
+          font-size: 18px;
+          .school-range {
+            padding-top: 5px;
+            font-size: 15px;
+          }
+        }
+
+        .school {
+          font-size: 15px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 31em) and (max-width: 37.5em) {
+  .education-main-container {
+    padding: 0 25px !important;
+    .education-container {
+      .education-heading {
+        font-size: 24px;
+      }
+      .school-container {
+        .school-heading {
+          display: block;
+          font-size: 20px;
+          .school-range {
+            padding-top: 5px;
+            font-size: 15px;
+          }
+        }
+
+        .school {
+          font-size: 15px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 38em) and (max-width: 48em) {
+  .education-main-container {
+    padding: 0 25px !important;
+  }
+}
+
+@media only screen and (min-width: 49em) and (max-width: 62.5em) {
+  .education-main-container {
+    padding: 0 50px !important;
   }
 }

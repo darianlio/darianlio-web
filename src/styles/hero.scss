@@ -112,7 +112,7 @@
         font-size: 25px;
       }
       .hero-details {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 300;
       }
 
@@ -131,14 +131,14 @@
 }
 
 //phone 376
-@media only screen and (max-width: 23.5em) {
+@media only screen and (min-width: 20.7em) and (max-width: 23.5em) {
   .hero-main-container {
     .hero-bg {
       background-position: calc(100%) calc(100% + 400px);
     }
     .hero-container {
       h1 {
-        font-size: 13px;
+        font-size: 14px;
       }
       h2 {
         font-size: 40px;
@@ -147,12 +147,12 @@
         font-size: 30px;
       }
       .hero-details {
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 300;
       }
 
       .main-btn {
-        font-size: 14px;
+        font-size: 15px;
         margin-top: 10px;
         padding: 1rem 0.7rem;
         font-weight: 300;
@@ -162,7 +162,7 @@
 }
 
 //phablet 480
-@media only screen and (max-width: 30em) {
+@media only screen and (min-width: 24em) and (max-width: 30em) {
   .hero-main-container {
     .hero-bg {
       background-position: calc(100%) calc(100% + 400px);
@@ -192,7 +192,7 @@
   }
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (min-width: 31em) and (max-width: 37.5em) {
   .hero-main-container {
     .hero-bg {
       background-position: calc(100%) calc(100% + 400px);
@@ -222,12 +222,13 @@
   }
 }
 
-@media only screen and (max-width: 48em) {
+@media only screen and (min-width: 38em) and (max-width: 48em) {
   .hero-main-container {
     .hero-bg {
       background-position: calc(100%) calc(100% + 400px);
     }
     .hero-container {
+      padding: 0 50px;
       h1 {
         font-size: 15px;
       }
@@ -238,15 +239,13 @@
         font-size: 50px;
       }
       .hero-details {
-        font-size: 18px;
-        font-weight: 300;
+        font-size: 20px;
       }
 
       .main-btn {
         font-size: 15px;
         margin-top: 10px;
         padding: 1rem 1rem;
-        font-weight: 300;
       }
     }
   }
@@ -256,19 +255,13 @@
   }
 }
 
-@media only screen and (max-width: 62.5em) {
+@media only screen and (min-width: 49em) and (max-width: 62.5em) {
   .nav-bar {
     padding: 1rem 3rem;
   }
+  .hero-main-container {
+    .hero-container {
+      padding: 0 100px;
+    }
+  }
 }
-
-/*
-
-//big desktop 1200
-@media (max-width: 75em) {
-}
-
-//giant 1440
-@media (max-width: 90em) {
-}
-*/

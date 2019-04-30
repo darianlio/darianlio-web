@@ -100,3 +100,86 @@
     }
   }
 }
+
+//small 330
+@media only screen and (max-width: 20.625em) {
+  .main-container {
+    .experience-container {
+      .experience-heading {
+        font-size: 24px;
+      }
+      .tabs-container {
+        display: block;
+        .tabs {
+          display: flex;
+          width: 100%;
+          margin-bottom: 30%;
+          overflow-x: scroll;
+          .tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-width: 120px;
+            padding: 0px 15px;
+            border-left: 0px;
+            border-bottom: 2px solid rgb(218, 220, 224);
+            transition: 650ms ease;
+            z-index: -1;
+          }
+        }
+      }
+      .content-container {
+        padding-left: 0;
+        .experience-title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+//phone 376
+@media only screen and (min-width: 20.7em) and (max-width: 37.5em) {
+  .main-container {
+    .experience-container {
+      .experience-heading {
+        font-size: 24px;
+      }
+      .tabs-container {
+        display: block;
+        .tabs {
+          display: flex;
+          width: 100%;
+          margin-bottom: 30px;
+          overflow-x: scroll;
+          .tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-width: 120px;
+            padding: 0px 15px;
+            border-left: 0px;
+            border-bottom: 2px solid rgb(218, 220, 224);
+            transition: 650ms ease;
+            z-index: -1;
+          }
+        }
+      }
+      .content-container {
+        padding-left: 0;
+        .experience-title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+//phablet 480
+@media only screen and (min-width: 24em) and (max-width: 30em) {
+}
+
+@media only screen and (min-width: 31em) and (max-width: 37.5em) {
+}
