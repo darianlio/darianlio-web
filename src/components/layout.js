@@ -29,7 +29,7 @@ class Layout extends Component {
     children: PropTypes.node.isRequired,
   }
 
-  state = { hidden: false }
+  state = { hidden: true }
 
   constructor(props) {
     super(props)
@@ -57,6 +57,8 @@ class Layout extends Component {
       document.body.clientHeight - 100
     ) {
       this.setState({ hidden: true })
+    } else if (currentScrollPos < 50) {
+      this.setState({ hidden: true })
     } else {
       this.setState({ hidden: false })
     }
@@ -64,8 +66,7 @@ class Layout extends Component {
 
   render() {
     const { children } = this.props
-    const hidden = this.state.hidden ? "gone" : ""
-
+    const hidden = this.state.hidden ? 0 : 1
     return (
       <StaticQuery
         query={graphql`
@@ -82,7 +83,7 @@ class Layout extends Component {
             <Head />
             <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
-            <div className={`sticky-button ${hidden}`}>
+            <div className={`sticky-button`} style={{ opacity: hidden }}>
               <div id="fixed-button-top">
                 <Link
                   activeClass="active"
