@@ -1,6 +1,6 @@
 import About from "./about"
 import Contact from "./contact"
-import Header from "./Header"
+import Header from "./header"
 import Footer from "./footer"
 import Head from "./head"
 import Hero from "./hero"
