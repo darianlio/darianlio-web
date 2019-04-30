@@ -31,10 +31,10 @@ class About extends Component {
         <Parallax speed={-1}>
           <div className="cube2" />
         </Parallax>
-        <Parallax speed={-2}>
+        <Parallax speed={-3}>
           <div className="cube3" />
         </Parallax>
-        <Parallax speed={-1}>
+        <Parallax speed={-2}>
           <div className="cube4" />
         </Parallax>
         <div
