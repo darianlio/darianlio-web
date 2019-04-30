@@ -112,14 +112,16 @@ ol {
   z-index: 9999;
   opacity: 0;
   transition: 300ms ease;
+  bottom: 1em;
+  right: 1em;
+  position: fixed;
+  display: block;
   #fixed-button-top {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 5px 10px;
     border-radius: 10px;
-    position: fixed;
-    bottom: 5rem;
-    right: 2rem;
     transition: 650ms ease;
+    margin-bottom: 5px;
 
     .fa-chevron-up {
       color: white;
@@ -134,9 +136,6 @@ ol {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 5px 10px;
     border-radius: 10px;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
     transition: 650ms ease;
 
     .fa-chevron-down {
