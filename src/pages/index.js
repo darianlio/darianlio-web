@@ -2,18 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 
-import Layout from "../components/layout"
-import Hero from "../components/hero"
-import About from "../components/about"
-import Experience from "../components/experience"
-import Education from "../components/education"
-import Projects from "../components/projects"
-import Contact from "../components/contact"
-import "../styles/index.scss"
+import Layout from "@components/layout"
+import Hero from "@components/hero"
+import About from "@components/about"
+import Experience from "@components/experience"
+import Education from "@components/education"
+import Projects from "@components/projects"
+import Contact from "@components/contact"
+import "@styles/index.scss"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <div className="mainContainer" id="content">
+    <div className="main-container" id="content">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
       <Experience data={data.experience.edges} />

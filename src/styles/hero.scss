@@ -1,6 +1,6 @@
-.mainContainer {
+.main-container {
   padding: 0;
-  .heroBg {
+  .hero-bg {
     background: url(https://source.unsplash.com/2COrlBb8KyQ/2560x1440) no-repeat;
     background-size: cover;
     background-position: calc(100%) calc(100% + 500px);
@@ -13,7 +13,7 @@
     z-index: -99;
   }
 
-  .heroContainer {
+  .hero-container {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -52,7 +52,7 @@
       color: rgb(150, 218, 173);
     }
 
-    .heroDetails {
+    .hero-details {
       margin: 0 0 0 4px;
       font-family: "Lato", "sans-serif";
       opacity: 0;
@@ -61,6 +61,8 @@
 
     #email-btn {
       margin-right: 20px;
+      opacity: 0;
+      animation: 0.5s fade 1.2s forwards;
     }
 
     .main-btn {
@@ -89,7 +91,7 @@
         transform: translateY(0);
       }
       opacity: 0;
-      animation: 0.5s fade 1.2s forwards;
+      animation: 0.5s fade 1.4s forwards;
     }
   }
 }

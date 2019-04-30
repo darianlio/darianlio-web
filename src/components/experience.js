@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import sr from "../utils/sr"
-import { srConfig } from "../config/index"
-import "./experience.scss"
+import sr from "@utils/sr"
+import { srConfig } from "@config/index"
+import "@styles/experience.scss"
 
 const Highlighter = styled.span`
   display: block;
@@ -79,7 +79,7 @@ class Experience extends Component {
         id="experience"
         ref={el => (this.experience = el)}
       >
-        <div className="experience-title">Where I&apos;ve Worked</div>
+        <div className="experience-heading">Where I&apos;ve Worked</div>
         <div className="tabs-container">
           <div className="tabs" role="tablist">
             {data &&
@@ -112,13 +112,13 @@ class Experience extends Component {
                   <TabContent
                     key={i}
                     isActive={this.isActive(i)}
-                    id={`job${i}`}
+                    id={`experience${i}`}
                     role="tabpanel"
                     tabIndex="0"
                     aria-labelledby={`job${i}`}
                     aria-hidden={!this.isActive(i)}
                   >
-                    <div className="job-title">
+                    <div className="experience-title">
                       <span>{title}</span>
                       <span className="company">
                         &nbsp;@&nbsp;
@@ -131,11 +131,11 @@ class Experience extends Component {
                         </a>
                       </span>
                     </div>
-                    <div className="job-range">
+                    <div className="experience-range">
                       <span>{range}</span>
                     </div>
                     <div
-                      className="job-description"
+                      className="experience-details"
                       dangerouslySetInnerHTML={{ __html: html }}
                     />
                   </TabContent>

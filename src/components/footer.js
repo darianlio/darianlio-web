@@ -1,8 +1,7 @@
 import React from "react"
-import { Link, animateScroll as scroll } from "react-scroll"
-
+import { Link } from "react-scroll"
 import { socialMedia } from "@config"
-import "./footer.scss"
+import "@styles/footer.scss"
 
 const Footer = () => (
   <footer id="footer">
@@ -13,14 +12,14 @@ const Footer = () => (
       smooth={true}
       offset={-70}
       duration={500}
-      className="arrow"
+      className="footer-arrow"
     />
-    <div className="footFlexContainer">
-      <div className="contactContainer">
-        <div className="contactTitle">
+    <div className="footer-flex-container">
+      <div className="footer-contact-container">
+        <div className="footer-contact-heading">
           <h1>Contact Me</h1>
         </div>
-        <div className="emailContainer">
+        <div className="email-container">
           <i className="far fa-envelope" />
           <a
             href="mailto:darianlio97@gmail.com"
@@ -30,7 +29,7 @@ const Footer = () => (
             darianlio97@gmail.com
           </a>
         </div>
-        <div className="locationContainer">
+        <div className="location-container">
           <i className="fas fa-map-marker-alt" />
           <a
             href="https://www.google.com/maps/place/Toronto,+ON/@43.6565353,-79.6010302,10z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb90d7c63ba5:0x323555502ab4c477!8m2!3d43.653226!4d-79.3831843"
@@ -42,13 +41,13 @@ const Footer = () => (
           </a>
         </div>
       </div>
-      <div className="socialContainer">
-        <p className="footerTitle">Let's talk.</p>
-        <div className="socialItemList">
+      <div className="footer-social-container">
+        <p className="footer-social-heading">Let's talk.</p>
+        <div className="social-list">
           {socialMedia.map(({ name, url }, i) => (
             <li key={i}>
               <a
-                className="socialLink"
+                className="social-links"
                 href={url}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
@@ -68,8 +67,8 @@ const Footer = () => (
           ))}
         </div>
       </div>
-      <div className="footNavContainer">
-        <div className="footerNavLinks">
+      <div className="footer-navigation-container">
+        <div className="navigation-links">
           <ul>
             <li>
               <Link

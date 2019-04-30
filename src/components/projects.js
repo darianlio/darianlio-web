@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
-import sr from "../utils/sr"
-import { srConfig } from "../config/index"
-import "./projects.scss"
+import sr from "@utils/sr"
+import { srConfig } from "@config/index"
+import "@styles/projects.scss"
 
 class Projects extends Component {
   static propTypes = {
@@ -40,7 +40,7 @@ class Projects extends Component {
         id="projects"
         ref={el => (this.projects = el)}
       >
-        <h4 className="project-title">Projects</h4>
+        <h4 className="project-heading">Projects</h4>
         <div className="project-grid">
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => {
@@ -72,9 +72,9 @@ class Projects extends Component {
                         />
                       </div>
                       <div className="project-overlay">
-                        <div>
+                        <div className="project-content">
                           <div className="project-header">
-                            <div className="folder">
+                            <div className="project-folder">
                               <i className="far fa-folder-open" />
                             </div>
                           </div>

@@ -1,7 +1,7 @@
 a {
   text-decoration: none;
 }
-.header {
+header {
   width: 100%;
   height: 100px;
   display: flex;
@@ -11,138 +11,130 @@ a {
   opacity: 0;
   animation: 0.5s fade 0.4s forwards;
   z-index: 999;
-}
+  .menu {
+    position: fixed;
+    top: 3rem;
+    right: 2rem;
+    //background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    border-radius: 3px;
+    cursor: pointer;
 
-.hamburger {
-  z-index: 999;
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &.is-active:hover {
-    opacity: 0.7;
-  }
-}
-
-.hamburger-box {
-  width: 30px;
-  height: 20px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-  }
-
-  &::before {
-    top: -10px;
-  }
-  &::after {
-    bottom: -10px;
-  }
-}
-
-.menu {
-  position: fixed;
-  top: 3rem;
-  right: 2rem;
-  //background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-  text-decoration: none;
-  z-index: 999;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  width: 30px;
-  height: 4px;
-  background-color: #72788d;
-  border-radius: 4px;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-  z-index: 99;
-}
-
-.hamburger--slider {
-  .hamburger-inner {
-    top: 2px;
-
-    &::before {
-      top: 10px;
-      transition-property: transform, opacity;
-      transition-timing-function: ease;
+    .hamburger {
+      z-index: 999;
+      padding: 15px 15px;
+      display: inline-block;
+      cursor: pointer;
+      transition-property: opacity, filter;
       transition-duration: 0.15s;
+      transition-timing-function: linear;
+      font: inherit;
+      color: inherit;
+      text-transform: none;
+      background-color: transparent;
+      border: 0;
+      margin: 0;
+      overflow: visible;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.is-active:hover {
+        opacity: 0.7;
+      }
+
+      .hamburger-box {
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+      }
     }
 
-    &::after {
-      top: 20px;
-    }
-  }
+    .hamburger--slider {
+      .hamburger-inner {
+        top: 2px;
 
-  &.is-active {
+        &::before {
+          top: 10px;
+          transition-property: transform, opacity;
+          transition-timing-function: ease;
+          transition-duration: 0.15s;
+        }
+
+        &::after {
+          top: 20px;
+        }
+      }
+
+      &.is-active {
+        .hamburger-inner {
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+
+          &::before {
+            transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+            opacity: 0;
+          }
+
+          &::after {
+            transform: translate3d(0, -20px, 0) rotate(-90deg);
+          }
+        }
+      }
+    }
+
     .hamburger-inner {
-      transform: translate3d(0, 10px, 0) rotate(45deg);
+      display: block;
+      top: 50%;
+      margin-top: -2px;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+      }
 
       &::before {
-        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-        opacity: 0;
+        top: -10px;
+      }
+      &::after {
+        bottom: -10px;
       }
 
+      &,
+      &::before,
       &::after {
-        transform: translate3d(0, -20px, 0) rotate(-90deg);
+        width: 30px;
+        height: 4px;
+        background-color: #72788d;
+        border-radius: 4px;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+        z-index: 99;
       }
     }
   }
 }
 
-.navbar {
+.nav-bar {
   width: 100%;
   height: 6rem;
   line-height: 6rem;
   position: relative;
   z-index: 99;
 
-  .logoContainer {
+  .logo-container {
     display: flex;
     justify-content: left;
     align-items: left;
-    .logoLink {
+    .logo-link {
       #logo {
         width: 45px;
         height: 45px;
         display: block;
-        text-transform: uppercase;
         font-size: 1rem;
         margin: 50px;
         line-height: 1rem;
@@ -156,6 +148,11 @@ button:focus {
     }
   }
 
+  .overlay.menu-open {
+    transform: scale(1);
+    opacity: 1;
+  }
+
   .overlay {
     ul {
       position: relative;
@@ -167,6 +164,7 @@ button:focus {
       li {
         a {
           text-decoration: none;
+          text-transform: uppercase;
           position: relative;
           margin-top: 50px;
           display: block;
@@ -197,30 +195,31 @@ button:focus {
           }
         }
       }
+
+      &:hover li a {
+        color: grey;
+      }
     }
   }
 
-  ul:hover li a {
-    color: grey;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity 650ms ease;
+    transform: scale(0);
+    opacity: 0;
   }
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.95);
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  transition: opacity 650ms ease;
-  transform: scale(0);
-  opacity: 0;
-}
-
-.overlay.menu-open {
-  transform: scale(1);
-  opacity: 1;
+button:focus {
+  outline: none;
+  text-decoration: none;
+  z-index: 999;
 }
 
 @media only screen and (min-width: 768px) {
@@ -228,17 +227,17 @@ button:focus {
     display: none;
   }
 
-  .navbar {
+  .nav-bar {
     display: flex;
     padding: 1rem 9rem;
     line-height: 0;
     justify-content: space-between;
 
-    .logoContainer {
+    .logo-container {
       display: flex;
       justify-content: left;
       align-items: left;
-      .logoLink {
+      .logo-link {
         #logo {
           width: 50px;
           height: 50px;
@@ -265,6 +264,7 @@ button:focus {
           a {
             color: #72788d;
             font-size: 1rem;
+            text-transform: none;
           }
         }
       }

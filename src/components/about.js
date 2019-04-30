@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import sr from "../utils/sr"
-import { srConfig } from "../config/index"
-import "./about.scss"
+import sr from "@utils/sr"
+import { srConfig } from "@config"
+import "@styles/about.scss"
 
 class About extends Component {
   static propTypes = {
@@ -20,24 +20,24 @@ class About extends Component {
     const { title, skills, avatar } = frontmatter
 
     return (
-      <div className="aboutContainer" id="about" ref={el => (this.about = el)}>
-        <div className="aboutHeading">{title}</div>
-        <div className="aboutFlexContainer">
-          <div className="aboutPicContainer">
-            <div className="aboutAvatarContainer">
+      <div className="about-container" id="about" ref={el => (this.about = el)}>
+        <div className="about-heading">{title}</div>
+        <div className="about-flex-container">
+          <div className="about-pic-container">
+            <div className="about-avatar-container">
               <Img
-                className="aboutAvatar"
+                className="about-avatar"
                 fluid={avatar.childImageSharp.fluid}
                 alt="Avatar"
               />
             </div>
           </div>
-          <div className="aboutContentContainer">
+          <div className="about-content-container">
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <ul className="skillsContainer">
+            <ul className="skills-container">
               {skills &&
                 skills.map((skill, i) => (
-                  <li className="skillLi" key={i}>
+                  <li className="skills" key={i}>
                     {skill}
                   </li>
                 ))}

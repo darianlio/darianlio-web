@@ -5,7 +5,7 @@ import favicon from "@images/favicon.ico"
 import favicon16x16 from "@images/favicon-32x32.png"
 import favicon32x32 from "@images/favicon-32x32.png"
 import appleIcon180x180 from "@images/apple-touch-icon.png"
-const config = require("../config")
+const config = require("@config")
 
 const Head = ({ metadata }) => (
   <Helmet>

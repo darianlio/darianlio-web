@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-scroll"
-import { throttle } from "../utils/throttle"
-import "./header.scss"
+import "@styles/header.scss"
 
 class Header extends Component {
   constructor(props) {
@@ -21,7 +20,7 @@ class Header extends Component {
     const navActive = this.state.menu ? "menu-open" : ""
 
     return (
-      <div className="header" id="header">
+      <header id="header">
         <div className="menu">
           <button
             className={`hamburger hamburger--slider ${menuActive}`}
@@ -34,9 +33,9 @@ class Header extends Component {
           </button>
         </div>
 
-        <nav className="navbar">
-          <div className="logoContainer">
-            <Link className="logoLink" to="/" aria-label="Home">
+        <nav className="nav-bar">
+          <div className="logo-container">
+            <Link className="logo-link" to="/" aria-label="Home">
               <img src={require(`../images/logo.png`)} id="logo" />
             </Link>
           </div>
@@ -110,7 +109,7 @@ class Header extends Component {
             </ul>
           </div>
         </nav>
-      </div>
+      </header>
     )
   }
 }

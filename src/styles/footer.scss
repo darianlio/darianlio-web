@@ -13,7 +13,7 @@ footer {
   }
   &:before,
   &:after,
-  & > .arrow {
+  & > .footer-arrow {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -26,12 +26,19 @@ footer {
     margin-left: -8px;
     border-width: 8px;
   }
-  & > .arrow {
+  & > .footer-arrow {
     margin-left: -11px;
     border-width: 11px;
-    border-bottom-color: #fff;
+    border-bottom-color: #72788d;
+    transition: 500ms ease;
   }
-  .footFlexContainer {
+
+  .footer-arrow:hover {
+    border-bottom-color: #fff;
+    transition: 500ms ease;
+  }
+
+  .footer-flex-container {
     padding: 0 100px;
     display: flex;
     letter-spacing: 1px;
@@ -49,11 +56,11 @@ footer {
       }
     }
 
-    .contactContainer {
+    .footer-contact-container {
       font-family: "muli", "sans-serif";
       font-size: 15px;
 
-      .contactTitle {
+      .footer-contact-heading {
         text-align: left;
       }
 
@@ -65,21 +72,23 @@ footer {
         font-size: 15px;
       }
 
-      .fa-envelope {
-        margin-right: 30px;
-        color: #72788d;
-      }
-      .fa-map-marker-alt {
-        margin-right: 34px;
-        color: #72788d;
+      .email-container {
+        .fa-envelope {
+          margin-right: 30px;
+          color: #72788d;
+        }
       }
 
-      .locationContainer {
+      .location-container {
         padding-top: 20px;
+        .fa-map-marker-alt {
+          margin-right: 34px;
+          color: #72788d;
+        }
       }
 
-      .emailContainer,
-      .locationContainer {
+      .email-container,
+      .location-container {
         padding: 10px 0;
         text-align: left;
         a {
@@ -92,26 +101,26 @@ footer {
       }
     }
 
-    .socialContainer {
+    .footer-social-container {
       font-family: "muli", "sans-serif";
       color: #faf9f9;
       width: 100%;
       max-width: 500px;
       text-align: center;
 
-      .footerTitle {
+      .footer-social-heading {
         letter-spacing: 0px;
         font-size: 18px;
       }
 
-      .socialItemList {
+      .social-list {
         display: inline-flex;
         text-decoration: none;
         list-style-type: none;
         margin: 0 7px;
       }
 
-      .socialLink {
+      .social-links {
         padding: 10px 0;
         display: inline-block;
         height: 15px;
@@ -120,11 +129,13 @@ footer {
       }
     }
 
-    .footNavContainer {
+    .footer-navigation-container {
       font-family: "muli", "sans-serif";
       font-size: 15px;
       text-align: right;
+      border-right: 2px solid #fff;
       a {
+        margin: 5px 10px;
         font-family: "muli", "sans-serif";
         color: #72788d;
         font-size: 15px;
@@ -152,24 +163,5 @@ footer {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-
-    .logoContainer {
-      padding-top: 50px;
-      .topLink {
-        #top {
-          filter: grayscale(100%) contrast(30%) sepia(0%) hue-rotate(0)
-            brightness(100%) invert(0);
-          transition: 650ms ease;
-          width: 25px;
-          padding-bottom: 5px;
-
-          &:hover {
-            filter: grayscale(100%) contrast(0%) sepia(0%) hue-rotate(0)
-              brightness(0) invert(1);
-            transition: 650ms ease;
-          }
-        }
-      }
-    }
   }
 }

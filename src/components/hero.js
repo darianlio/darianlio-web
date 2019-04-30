@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import resume from "../images/resume.pdf"
-import email from "../config/index"
-import "./hero.scss"
+import resume from "@images/resume.pdf"
+import email from "@config"
+import "@styles/hero.scss"
 
 class Hero extends Component {
   static propTypes = {
@@ -15,13 +15,13 @@ class Hero extends Component {
 
     return (
       <div>
-        <div className="heroBg" />
-        <div className="heroContainer">
+        <div className="hero-bg" />
+        <div className="hero-container">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.name}</h2>
           <h3>{frontmatter.subtitle}</h3>
           <div
-            className="heroDetails"
+            className="hero-details"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <span>
@@ -32,7 +32,7 @@ class Hero extends Component {
               className="main-btn"
               id="email-btn"
             >
-              Get I n Touch
+              Get In Touch
             </a>
             <a
               href={resume}

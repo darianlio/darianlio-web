@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import sr from "../utils/sr"
+import sr from "@utils/sr"
 import { email, srConfig } from "@config"
-import "./contact.scss"
+import "@styles/contact.scss"
 
 class Contact extends Component {
   static propTypes = {
@@ -24,13 +24,13 @@ class Contact extends Component {
         id="contact"
         ref={el => (this.contact = el)}
       >
-        <div className="contactTitle">{title}</div>
+        <div className="contact-heading">{title}</div>
         <div
-          className="contactDetails"
+          className="contact-details"
           dangerouslySetInnerHTML={{ __html: html }}
         />
         <a
-          className="contactbtn"
+          className="contact-btn"
           href={`mailto:${email}`}
           rel="nofollow noopener noreferrer"
         >

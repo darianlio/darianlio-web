@@ -10,11 +10,11 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Particles from "react-particles-js"
 import { Link } from "react-scroll"
-import { particleConfig } from "../config/index"
+import { particleConfig } from "@config"
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
-import "../styles/index.scss"
+import "@styles/index.scss"
 
 const ParticlesStyle = {
   position: "fixed",
