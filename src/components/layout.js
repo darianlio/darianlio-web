@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Particles from "react-particles-js"
 import { Link } from "react-scroll"
+import { throttle } from "@utils/throttle"
 import { particleConfig } from "@config"
 import { Head, Header, Footer } from "@components"
 import "@styles/index.scss"
@@ -28,8 +29,42 @@ class Layout extends Component {
     children: PropTypes.node.isRequired,
   }
 
+  state = { hidden: false }
+
+  constructor(props) {
+    super(props)
+
+    // Bind the function to this component, so it has access to this.state
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+
+  componentWillMount() {
+    // When this component mounts, begin listening for scroll changes
+    window.addEventListener("scroll", throttle(this.handleScroll))
+  }
+
+  componentWillUnmount() {
+    // If this component is unmounted, stop listening
+    window.removeEventListener("scroll", throttle(this.handleScroll))
+  }
+
+  handleScroll(e) {
+    // Set the state of hidden depending on scroll position
+    // We only change the state if it needs to be changed
+    const currentScrollPos = window.scrollY
+    if (
+      !this.state.hidden &&
+      window.innerHeight + currentScrollPos > document.body.clientHeight - 100
+    ) {
+      this.setState({ hidden: true })
+    } else if (this.state.hidden) {
+      this.setState({ hidden: false })
+    }
+  }
+
   render() {
     const { children } = this.props
+    const hidden = this.state.hidden ? "gone" : ""
 
     return (
       <StaticQuery
@@ -42,12 +77,12 @@ class Layout extends Component {
             }
           }
         `}
-        render={({ site }) => (
+        render={() => (
           <div id="root">
             <Head />
             <Particles params={particleConfig} style={ParticlesStyle} />
             <Header />
-            <div className="sticky-button">
+            <div className={`sticky-button ${hidden}`}>
               <div id="fixed-button-top">
                 <Link
                   activeClass="active"

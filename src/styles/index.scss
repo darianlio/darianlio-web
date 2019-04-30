@@ -109,6 +109,9 @@ ol {
 }
 
 .sticky-button {
+  z-index: 9999;
+  opacity: 1;
+  transition: 300ms ease;
   #fixed-button-top {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 5px 10px;
@@ -148,6 +151,10 @@ ol {
     opacity: 0;
     animation: 0.5s fade 1.5s forwards;
   }
+}
+
+.gone {
+  opacity: 0;
 }
 
 .main-container {

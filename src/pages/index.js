@@ -19,7 +19,11 @@ const IndexPage = ({ data }) => (
     <div className="main-container">
       <About data={data.about.edges} />
       <Experience data={data.experience.edges} />
+    </div>
+    <div className="education-main-container">
       <Education data={data.education.edges} />
+    </div>
+    <div className="main-container">
       <Projects data={data.projects.edges} />
       <Contact data={data.contact.edges} />
     </div>

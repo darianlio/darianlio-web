@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import sr from "@utils/sr"
+import Parallax from "react-rellax"
 import { srConfig } from "@config/index"
 import "@styles/experience.scss"
 
@@ -74,73 +75,87 @@ class Experience extends Component {
     const { data } = this.props
 
     return (
-      <div
-        className="experience-container"
-        id="experience"
-        ref={el => (this.experience = el)}
-      >
-        <div className="experience-heading">Where I&apos;ve Worked</div>
-        <div className="tabs-container">
-          <div className="tabs" role="tablist">
-            {data &&
-              data.map(({ node }, i) => {
-                const { company } = node.frontmatter
-                return (
-                  <button
-                    className="tab"
-                    key={i}
-                    isActive={this.isActive(i)}
-                    onClick={e => this.setActiveTab(i, e)}
-                    role="tab"
-                    aria-selected={this.isActive(i) ? "true" : "false"}
-                    aria-controls={`tab${i}`}
-                    id={`tab${i}`}
-                    tabIndex={this.isActive(i) ? "0" : "-1"}
-                  >
-                    <span>{company}</span>
-                  </button>
-                )
-              })}
-            <Highlighter activeTabId={activeTabId} />
-          </div>
-          <div className="content-container">
-            {data &&
-              data.map(({ node }, i) => {
-                const { frontmatter, html } = node
-                const { title, url, company, range } = frontmatter
-                return (
-                  <TabContent
-                    key={i}
-                    isActive={this.isActive(i)}
-                    id={`experience${i}`}
-                    role="tabpanel"
-                    tabIndex="0"
-                    aria-labelledby={`job${i}`}
-                    aria-hidden={!this.isActive(i)}
-                  >
-                    <div className="experience-title">
-                      <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                        >
-                          {company}
-                        </a>
-                      </span>
-                    </div>
-                    <div className="experience-range">
-                      <span>{range}</span>
-                    </div>
-                    <div
-                      className="experience-details"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
-                  </TabContent>
-                )
-              })}
+      <div>
+        <Parallax>
+          <div className="moon" />
+        </Parallax>
+        <Parallax speed={0}>
+          <div className="rocket1" />
+        </Parallax>
+        <Parallax speed={-2}>
+          <div className="rocket2" />
+        </Parallax>
+        <Parallax speed={-1}>
+          <div className="rocket3" />
+        </Parallax>
+        <div
+          className="experience-container"
+          id="experience"
+          ref={el => (this.experience = el)}
+        >
+          <div className="experience-heading">Where I&apos;ve Worked</div>
+          <div className="tabs-container">
+            <div className="tabs" role="tablist">
+              {data &&
+                data.map(({ node }, i) => {
+                  const { company } = node.frontmatter
+                  return (
+                    <button
+                      className="tab"
+                      key={i}
+                      isActive={this.isActive(i)}
+                      onClick={e => this.setActiveTab(i, e)}
+                      role="tab"
+                      aria-selected={this.isActive(i) ? "true" : "false"}
+                      aria-controls={`tab${i}`}
+                      id={`tab${i}`}
+                      tabIndex={this.isActive(i) ? "0" : "-1"}
+                    >
+                      <span>{company}</span>
+                    </button>
+                  )
+                })}
+              <Highlighter activeTabId={activeTabId} />
+            </div>
+            <div className="content-container">
+              {data &&
+                data.map(({ node }, i) => {
+                  const { frontmatter, html } = node
+                  const { title, url, company, range } = frontmatter
+                  return (
+                    <TabContent
+                      key={i}
+                      isActive={this.isActive(i)}
+                      id={`experience${i}`}
+                      role="tabpanel"
+                      tabIndex="0"
+                      aria-labelledby={`job${i}`}
+                      aria-hidden={!this.isActive(i)}
+                    >
+                      <div className="experience-title">
+                        <span>{title}</span>
+                        <span className="company">
+                          &nbsp;@&nbsp;
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                          >
+                            {company}
+                          </a>
+                        </span>
+                      </div>
+                      <div className="experience-range">
+                        <span>{range}</span>
+                      </div>
+                      <div
+                        className="experience-details"
+                        dangerouslySetInnerHTML={{ __html: html }}
+                      />
+                    </TabContent>
+                  )
+                })}
+            </div>
           </div>
         </div>
       </div>
