@@ -4,17 +4,23 @@ import favicon from "@images/favicon.ico"
 import favicon16x16 from "@images/favicon-32x32.png"
 import favicon32x32 from "@images/favicon-32x32.png"
 import appleIcon180x180 from "@images/apple-touch-icon.png"
-const config = require("@config")
+import {
+  name,
+  description,
+  siteTitle,
+  siteKeywords,
+  googleAnalyticsID,
+} from "@config"
 
 const Head = () => (
   <Helmet>
-    <title>{config.siteTitle}</title>
+    <title>{siteTitle}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content={config.name} />
-    <meta name="description" content={config.description} />
-    <meta name="keywords" content={config.siteKeywords} />
-    <meta name="google-analytics" content={config.googleAnalyticsID} />
+    <meta name="author" content={name} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={siteKeywords} />
+    <meta name="google-analytics" content={googleAnalyticsID} />
     <link rel="shortcut icon" href={favicon} />
     <link rel="apple-touch-icon" sizes="180x180" href={appleIcon180x180} />
     <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32} />

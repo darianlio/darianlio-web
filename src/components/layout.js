@@ -40,12 +40,16 @@ class Layout extends Component {
 
   componentWillMount() {
     // When this component mounts, begin listening for scroll changes
-    window.addEventListener("scroll", throttle(this.handleScroll))
+    if (typeof window !== `undefined`) {
+      window.addEventListener("scroll", throttle(this.handleScroll))
+    }
   }
 
   componentWillUnmount() {
     // If this component is unmounted, stop listening
-    window.removeEventListener("scroll", throttle(this.handleScroll))
+    if (typeof window !== `undefined`) {
+      window.removeEventListener("scroll", throttle(this.handleScroll))
+    }
   }
 
   handleScroll(e) {
