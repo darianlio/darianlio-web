@@ -88,15 +88,23 @@ class Experience extends Component {
 
     return (
       <div>
-        <Parallax>
-          <div className="moon" />
-        </Parallax>
-        <Parallax speed={0}>
-          <div className="rocket1" />
-        </Parallax>
-        <Parallax speed={-1}>
-          <div className="rocket2" />
-        </Parallax>
+        <div id="experience-parallax">
+          <Parallax>
+            <div className="moon">
+              <img src={require(`../images/moon.png`)} />
+            </div>
+          </Parallax>
+          <Parallax speed={0}>
+            <div className="rocket1">
+              <img src={require(`../images/rocket.png`)} />
+            </div>
+          </Parallax>
+          <Parallax speed={-1}>
+            <div className="rocket2">
+              <img src={require(`../images/rocket.png`)} />
+            </div>
+          </Parallax>
+        </div>
         <div
           className="experience-container"
           id="experience"

@@ -2,33 +2,34 @@
 .rocket1,
 .rocket2 {
   z-index: -99999;
-}
-.moon {
   width: 100%;
   height: 100vh;
   position: absolute;
-  background: url(../images/moon.png) no-repeat 50% 45%;
-  background-size: 40%;
-  right: 40%;
-}
-.rocket1 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  background: url(../images/rocket.png) no-repeat 100% 100%;
-  background-size: 35%;
-  right: 15%;
-  transform: rotate(25deg);
 }
 
-.rocket2 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  background: url(../images/rocket.png) no-repeat 80% 40%;
-  background-size: 15%;
-  right: 10%;
-  transform: rotate(25deg);
+#experience-parallax {
+  .moon {
+    img {
+      padding-top: 20%;
+      width: 300px;
+    }
+  }
+  .rocket1 {
+    padding-top: 30%;
+    padding-left: 50%;
+    img {
+      width: 350px;
+      transform: rotate(30deg);
+    }
+  }
+  .rocket2 {
+    padding-top: 20%;
+    padding-left: 70%;
+    img {
+      width: 500px;
+      transform: rotate(30deg);
+    }
+  }
 }
 
 .experience-container {
@@ -104,7 +105,11 @@
 //small 330
 @media only screen and (max-width: 20.625em) {
   .main-container {
+    #experience-parallax {
+      display: none;
+    }
     .experience-container {
+      padding: 100px 0;
       .experience-heading {
         font-size: 24px;
       }
@@ -140,9 +145,13 @@
 }
 
 //phone 376
-@media only screen and (min-width: 20.7em) and (max-width: 37.5em) {
+@media only screen and (min-width: 20.7em) and (max-width: 30em) {
   .main-container {
+    #experience-parallax {
+      display: none;
+    }
     .experience-container {
+      padding: 100px 0;
       .experience-heading {
         font-size: 24px;
       }
@@ -177,9 +186,151 @@
   }
 }
 
-//phablet 480
-@media only screen and (min-width: 24em) and (max-width: 30em) {
+@media only screen and (min-width: 31em) and (max-width: 37.5em) {
+  .main-container {
+    #experience-parallax {
+      .moon {
+        img {
+          padding-top: 135px;
+          width: 150px;
+        }
+      }
+      .rocket1 {
+        padding-top: 650px;
+        padding-left: 150px;
+        img {
+          width: 150px;
+          transform: rotate(30deg);
+        }
+      }
+      .rocket2 {
+        padding-top: 325px;
+        padding-left: 250px;
+        img {
+          width: 200px;
+          transform: rotate(30deg);
+        }
+      }
+    }
+    .experience-container {
+      padding: 100px 0;
+      .experience-heading {
+        font-size: 24px;
+      }
+      .tabs-container {
+        display: block;
+        .tabs {
+          display: flex;
+          width: 100%;
+          margin-bottom: 30px;
+          overflow-x: scroll;
+          .tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-width: 120px;
+            padding: 0px 15px;
+            border-left: 0px;
+            border-bottom: 2px solid rgb(218, 220, 224);
+            transition: 650ms ease;
+            z-index: -1;
+          }
+        }
+      }
+      .content-container {
+        padding-left: 0;
+        .experience-title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (min-width: 31em) and (max-width: 37.5em) {
+@media only screen and (min-width: 38em) and (max-width: 48em) {
+  .main-container {
+    #experience-parallax {
+      .moon {
+        img {
+          padding-top: 120px;
+          width: 200px;
+        }
+      }
+      .rocket1 {
+        padding-top: 560px;
+        padding-left: 270px;
+        img {
+          width: 200px;
+          transform: rotate(30deg);
+        }
+      }
+      .rocket2 {
+        padding-top: 255px;
+        padding-left: 400px;
+        img {
+          width: 250px;
+          transform: rotate(30deg);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 49em) and (max-width: 62.5em) {
+  .main-container {
+    #experience-parallax {
+      .moon {
+        img {
+          padding-top: 150px;
+          width: 225px;
+        }
+      }
+      .rocket1 {
+        padding-top: 500px;
+        padding-left: 270px;
+        img {
+          width: 225px;
+          transform: rotate(30deg);
+        }
+      }
+      .rocket2 {
+        padding-top: 285px;
+        padding-left: 430px;
+        img {
+          width: 275px;
+          transform: rotate(30deg);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 63em) and (max-width: 75em) {
+  .main-container {
+    #experience-parallax {
+      .moon {
+        img {
+          padding-top: 150px;
+          width: 300px;
+        }
+      }
+      .rocket1 {
+        padding-top: 550px;
+        padding-left: 300px;
+        img {
+          width: 250px;
+          transform: rotate(30deg);
+        }
+      }
+      .rocket2 {
+        padding-top: 355px;
+        padding-left: 500px;
+        img {
+          width: 325px;
+          transform: rotate(30deg);
+        }
+      }
+    }
+  }
 }

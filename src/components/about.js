@@ -25,19 +25,29 @@ class About extends Component {
       <div>
         <div id="about-parallax" ref={el => (this.aboutParallax = el)}>
           <Parallax speed={2}>
-            <div className="switch" />
+            <div className="switch">
+              <img src={require(`../images/switch.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={-1}>
-            <div className="cube1" />
+            <div className="cube1">
+              <img src={require(`../images/cube.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={-1}>
-            <div className="cube2" />
+            <div className="cube2">
+              <img src={require(`../images/cube.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={-3}>
-            <div className="cube3" />
+            <div className="cube3">
+              <img src={require(`../images/cube.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={-2}>
-            <div className="cube4" />
+            <div className="cube4">
+              <img src={require(`../images/cube.png`)} />
+            </div>
           </Parallax>
         </div>
         <div

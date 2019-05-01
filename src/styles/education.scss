@@ -3,17 +3,14 @@
   margin: 0 auto;
   width: 100%;
   counter-reset: section;
-  .test {
+  #education-parallax {
     margin-top: 500px;
     .clouds {
       width: 100%;
       height: 100vh;
       position: absolute;
-      background: url(../images/clouds.png) no-repeat 100% 100%;
-      right: 0%;
-      top: 250%;
+      background: url(../images/clouds.png) no-repeat 100% 0%;
       background-size: 100%;
-      max-width: 2560px;
       z-index: -99999;
     }
   }
@@ -66,6 +63,9 @@
 @media only screen and (min-width: 20.625em) and (max-width: 30em) {
   .education-main-container {
     padding: 0 25px !important;
+    #education-parallax {
+      margin: 0;
+    }
     .education-container {
       .education-heading {
         font-size: 24px;
@@ -91,8 +91,17 @@
 
 @media only screen and (min-width: 31em) and (max-width: 37.5em) {
   .education-main-container {
-    padding: 0 25px !important;
+    padding: 0 !important;
+    #education-parallax {
+      margin: 0;
+      .clouds {
+        top: 0;
+        background: url(../images/clouds.png) no-repeat 100% 60%;
+        background-size: 100%;
+      }
+    }
     .education-container {
+      padding: 100px 25px;
       .education-heading {
         font-size: 24px;
       }
@@ -117,12 +126,51 @@
 
 @media only screen and (min-width: 38em) and (max-width: 48em) {
   .education-main-container {
-    padding: 0 25px !important;
+    padding: 0 !important;
+    #education-parallax {
+      margin: 0;
+      .clouds {
+        top: 0;
+        background: url(../images/clouds.png) no-repeat 100% 55%;
+        background-size: 100%;
+      }
+    }
+    .education-container {
+      padding: 100px 50px;
+    }
   }
 }
 
 @media only screen and (min-width: 49em) and (max-width: 62.5em) {
   .education-main-container {
-    padding: 0 50px !important;
+    padding: 0 !important;
+    #education-parallax {
+      margin: 0;
+      .clouds {
+        top: 0;
+        background: url(../images/clouds.png) no-repeat 100% 50%;
+        background-size: 100%;
+      }
+    }
+    .education-container {
+      padding: 100px 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: 63em) and (max-width: 75em) {
+  .education-main-container {
+    padding: 0 !important;
+    #education-parallax {
+      margin: 0;
+      .clouds {
+        top: 0;
+        background: url(../images/clouds.png) no-repeat 100% 50%;
+        background-size: 100%;
+      }
+    }
+    .education-container {
+      padding: 100px 50px;
+    }
   }
 }

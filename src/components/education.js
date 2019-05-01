@@ -17,7 +17,7 @@ class Education extends Component {
   render() {
     const { data } = this.props
     return (
-      <div className="test">
+      <div id="education-parallax">
         <Parallax speed={2}>
           <div className="clouds" />
         </Parallax>

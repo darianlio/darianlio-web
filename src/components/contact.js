@@ -24,16 +24,24 @@ class Contact extends Component {
       <div>
         <div id="contact-parallax" ref={el => (this.contactParallax = el)}>
           <Parallax speed={1} zIndex={-99999}>
-            <div className="contact-mail" />
+            <div className="contact-mail">
+              <img src={require(`../images/mail.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={2} zIndex={-99999}>
-            <div className="contact-fb" />
+            <div className="contact-fb">
+              <img src={require(`../images/fb.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={1} zIndex={-99999}>
-            <div className="contact-gh" />
+            <div className="contact-gh">
+              <img src={require(`../images/gh.png`)} />
+            </div>
           </Parallax>
           <Parallax speed={2} zIndex={-99999}>
-            <div className="contact-insta" />
+            <div className="contact-insta">
+              <img src={require(`../images/insta.png`)} />
+            </div>
           </Parallax>
         </div>
         <div
