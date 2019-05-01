@@ -17,10 +17,12 @@ class Education extends Component {
   render() {
     const { data } = this.props
     return (
-      <div id="education-parallax">
-        <Parallax speed={2}>
-          <div className="clouds" />
-        </Parallax>
+      <div>
+        <div id="education-parallax">
+          <Parallax speed={2}>
+            <div className="clouds" />
+          </Parallax>
+        </div>
         <div
           className="education-container"
           id="education"
