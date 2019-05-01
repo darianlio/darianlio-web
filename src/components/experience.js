@@ -21,7 +21,7 @@ const Highlighter = styled.span`
     ${props => (props.activeTabId > 0 ? props.activeTabId * 42 : 0)}px
   );
 
-  @media only screen and (min-width: 20.625em) and (max-width: 37.5em) {
+  @media only screen and (min-width: 20.625em) and (max-width: 20.7em) {
     width: 100%;
     background: rgb(141, 216, 171) none repeat scroll 0% 0%;
     max-width: 140px;
@@ -30,6 +30,42 @@ const Highlighter = styled.span`
     bottom: 0px;
     transform: translateX(
       ${props => (props.activeTabId > -1 ? props.activeTabId * 140 : 0)}px
+    );
+  }
+
+  @media only screen and (min-width: 20.7em) and (max-width: 23.5em) {
+    width: 100%;
+    background: rgb(141, 216, 171) none repeat scroll 0% 0%;
+    max-width: 162px;
+    height: 2px;
+    top: auto;
+    bottom: 0px;
+    transform: translateX(
+      ${props => (props.activeTabId > -1 ? props.activeTabId * 162 : 0)}px
+    );
+  }
+
+  @media only screen and (min-width: 24em) and (max-width: 30em) {
+    width: 100%;
+    background: rgb(141, 216, 171) none repeat scroll 0% 0%;
+    max-width: 215px;
+    height: 2px;
+    top: auto;
+    bottom: 0px;
+    transform: translateX(
+      ${props => (props.activeTabId > -1 ? props.activeTabId * 215 : 0)}px
+    );
+  }
+
+  @media only screen and (min-width: 30.5em) and (max-width: 37.5em) {
+    width: 100%;
+    background: rgb(141, 216, 171) none repeat scroll 0% 0%;
+    max-width: 275px;
+    height: 2px;
+    top: auto;
+    bottom: 0px;
+    transform: translateX(
+      ${props => (props.activeTabId > -1 ? props.activeTabId * 275 : 0)}px
     );
   }
 `
