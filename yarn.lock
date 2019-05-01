@@ -9512,6 +9512,14 @@ react-particles-js@^2.6.0:
   dependencies:
     lodash "^4.17.11"
 
+react-rellax@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-rellax/-/react-rellax-1.0.3.tgz#43e8f41bcbab8eabf9a2c720a48382258ab38820"
+  integrity sha512-njrc/VpQMPmzLVBdwwhIKEXXeYbPog94Fv8TKbhTnIG8x97Df6ZATRWQJs2WVvMY4SXhjQ5j8vE93dlur7HsKw==
+  dependencies:
+    prop-types "^15.6.1"
+    rellax "^1.9.1"
+
 react-scroll@^1.7.11:
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.7.11.tgz#0018c3a141b16a2db212086133c172bea1e63c24"
@@ -9770,6 +9778,11 @@ relay-runtime@2.0.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
+
+rellax@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/rellax/-/rellax-1.9.1.tgz#aca23c1acf3867e66348234f86da435d7ccc3c49"
+  integrity sha512-z1wQwbmVYy3NoVbNxdnYyXyUG/2wBpyKPSsoFhb44Tv5mooSueqURcksHxO9zarm2adFob6qT5xMtpb30F0iVA==
 
 remark-parse@^1.1.0:
   version "1.1.0"
