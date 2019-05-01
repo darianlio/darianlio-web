@@ -44,7 +44,7 @@
         flex-direction: column;
         position: relative;
         align-items: flex-start;
-        height: 34vh;
+        height: 36vh;
 
         &:hover {
           .project-overlay {
@@ -173,6 +173,34 @@
         .project {
           .project-inner {
             height: 36vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 91em) and (max-width: 120em) {
+  .main-container {
+    .project-container {
+      .project-grid {
+        .project {
+          .project-inner {
+            height: 33vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 121em) and (max-width: 160em) {
+  .main-container {
+    .project-container {
+      .project-grid {
+        .project {
+          .project-inner {
+            height: 24vh;
           }
         }
       }
