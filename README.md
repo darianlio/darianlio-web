@@ -1,7 +1,9 @@
-## Darian Lio's Website V3
-My personal website utilizing Gatsby and React!
+## Darian Lio's Website
+My latest personal website, built with React/Gatsby, and deployed on Netlify.
 
 ## Built with
+- HTML
+- SASS
 - React
 - Gatsby
 - Node.js
@@ -26,9 +28,11 @@ My personal website utilizing Gatsby and React!
 - prop-types
 - node-sass
 - react
+- reac-rellax
 - react-scroll
 - react-dom
 - react-helmet
+- scrollreveal
 
 ## 🚀 Quick start
 
