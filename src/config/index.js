@@ -28,6 +28,7 @@ module.exports = {
     },
   ],
 
+  googleVerification: "YOjkKY8kWAhSfXZiUr7wiDxRs7GHiOpnEvcw97cAT2o",
   googleAnalyticsID: "UA-138972191-1",
 
   srConfig: () => ({
