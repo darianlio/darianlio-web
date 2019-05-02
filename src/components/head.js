@@ -10,6 +10,7 @@ import {
   siteTitle,
   siteKeywords,
   googleAnalyticsID,
+  googleVerification,
 } from "@config"
 
 const Head = () => (
@@ -17,6 +18,7 @@ const Head = () => (
     <title>{siteTitle}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content={googleVerification} />
     <meta name="author" content={name} />
     <meta name="description" content={description} />
     <meta name="keywords" content={siteKeywords} />
