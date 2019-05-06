@@ -35,7 +35,15 @@ class Header extends Component {
 
         <nav className="nav-bar">
           <div className="logo-container">
-            <Link className="logo-link" to="/" aria-label="Home">
+            <Link
+              className="logo-link"
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              aria-label="Home"
+            >
               <img
                 src={require(`../images/logo.png`)}
                 id="logo"
