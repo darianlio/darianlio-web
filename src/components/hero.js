@@ -1,8 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import Parallax from "react-rellax"
 import resume from "@images/resume.pdf"
-import email from "@config"
+import { email } from "@config"
 import "@styles/hero.scss"
 
 class Hero extends Component {
